@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btPlay = new System.Windows.Forms.Button();
             this.gbPlayers = new System.Windows.Forms.GroupBox();
@@ -51,22 +50,23 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Indigo;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Eras Demi ITC", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Eras Demi ITC", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(-3, 49);
+            this.textBox1.Location = new System.Drawing.Point(-307, 487);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(589, 41);
+            this.textBox1.Size = new System.Drawing.Size(946, 74);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Memorize";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btPlay
             // 
-            this.btPlay.BackColor = System.Drawing.Color.Black;
+            this.btPlay.BackColor = System.Drawing.Color.White;
             this.btPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btPlay.Font = new System.Drawing.Font("Eras Demi ITC", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPlay.ForeColor = System.Drawing.Color.BlueViolet;
-            this.btPlay.Location = new System.Drawing.Point(204, 473);
+            this.btPlay.Location = new System.Drawing.Point(406, 493);
             this.btPlay.Name = "btPlay";
             this.btPlay.Size = new System.Drawing.Size(171, 62);
             this.btPlay.TabIndex = 1;
@@ -79,9 +79,9 @@
             this.gbPlayers.Controls.Add(this.rbFour);
             this.gbPlayers.Controls.Add(this.rbThree);
             this.gbPlayers.Controls.Add(this.rbTwo);
-            this.gbPlayers.Location = new System.Drawing.Point(80, 128);
+            this.gbPlayers.Location = new System.Drawing.Point(148, 61);
             this.gbPlayers.Name = "gbPlayers";
-            this.gbPlayers.Size = new System.Drawing.Size(398, 52);
+            this.gbPlayers.Size = new System.Drawing.Size(210, 52);
             this.gbPlayers.TabIndex = 5;
             this.gbPlayers.TabStop = false;
             // 
@@ -93,7 +93,7 @@
             this.rbFour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbFour.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rbFour.Font = new System.Drawing.Font("Eras Demi ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFour.Location = new System.Drawing.Point(342, 15);
+            this.rbFour.Location = new System.Drawing.Point(146, 15);
             this.rbFour.Name = "rbFour";
             this.rbFour.Size = new System.Drawing.Size(29, 29);
             this.rbFour.TabIndex = 2;
@@ -109,7 +109,7 @@
             this.rbThree.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbThree.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rbThree.Font = new System.Drawing.Font("Eras Demi ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbThree.Location = new System.Drawing.Point(177, 15);
+            this.rbThree.Location = new System.Drawing.Point(89, 15);
             this.rbThree.Name = "rbThree";
             this.rbThree.Size = new System.Drawing.Size(29, 29);
             this.rbThree.TabIndex = 1;
@@ -138,9 +138,9 @@
             this.groupBox1.Controls.Add(this.rbEasy);
             this.groupBox1.Controls.Add(this.rbMedium);
             this.groupBox1.Controls.Add(this.rbHard);
-            this.groupBox1.Location = new System.Drawing.Point(80, 228);
+            this.groupBox1.Location = new System.Drawing.Point(148, 152);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 94);
+            this.groupBox1.Size = new System.Drawing.Size(295, 94);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
@@ -168,7 +168,7 @@
             this.rbMedium.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbMedium.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rbMedium.Font = new System.Drawing.Font("Eras Demi ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMedium.Location = new System.Drawing.Point(157, 33);
+            this.rbMedium.Location = new System.Drawing.Point(104, 33);
             this.rbMedium.Name = "rbMedium";
             this.rbMedium.Size = new System.Drawing.Size(80, 29);
             this.rbMedium.TabIndex = 2;
@@ -184,7 +184,7 @@
             this.rbHard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbHard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rbHard.Font = new System.Drawing.Font("Eras Demi ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHard.Location = new System.Drawing.Point(317, 33);
+            this.rbHard.Location = new System.Drawing.Point(200, 33);
             this.rbHard.Name = "rbHard";
             this.rbHard.Size = new System.Drawing.Size(56, 29);
             this.rbHard.TabIndex = 1;
@@ -194,19 +194,24 @@
             // 
             // cbSubjects
             // 
-            this.cbSubjects.BackColor = System.Drawing.Color.Black;
+            this.cbSubjects.BackColor = System.Drawing.Color.White;
+            this.cbSubjects.Font = new System.Drawing.Font("Eras Demi ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSubjects.FormattingEnabled = true;
-            this.cbSubjects.Location = new System.Drawing.Point(80, 371);
+            this.cbSubjects.Items.AddRange(new object[] {
+            "Jura",
+            "Cars",
+            "Nature"});
+            this.cbSubjects.Location = new System.Drawing.Point(148, 288);
             this.cbSubjects.Name = "cbSubjects";
-            this.cbSubjects.Size = new System.Drawing.Size(159, 22);
+            this.cbSubjects.Size = new System.Drawing.Size(159, 27);
             this.cbSubjects.TabIndex = 7;
             // 
             // lbDifficulty
             // 
             this.lbDifficulty.AutoSize = true;
             this.lbDifficulty.Font = new System.Drawing.Font("Eras Demi ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDifficulty.ForeColor = System.Drawing.Color.White;
-            this.lbDifficulty.Location = new System.Drawing.Point(79, 208);
+            this.lbDifficulty.ForeColor = System.Drawing.Color.Black;
+            this.lbDifficulty.Location = new System.Drawing.Point(144, 130);
             this.lbDifficulty.Name = "lbDifficulty";
             this.lbDifficulty.Size = new System.Drawing.Size(91, 23);
             this.lbDifficulty.TabIndex = 8;
@@ -216,8 +221,8 @@
             // 
             this.lbSubject.AutoSize = true;
             this.lbSubject.Font = new System.Drawing.Font("Eras Demi ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSubject.ForeColor = System.Drawing.Color.White;
-            this.lbSubject.Location = new System.Drawing.Point(79, 345);
+            this.lbSubject.ForeColor = System.Drawing.Color.Black;
+            this.lbSubject.Location = new System.Drawing.Point(144, 262);
             this.lbSubject.Name = "lbSubject";
             this.lbSubject.Size = new System.Drawing.Size(76, 23);
             this.lbSubject.TabIndex = 9;
@@ -227,19 +232,18 @@
             // 
             this.lbPlayers.AutoSize = true;
             this.lbPlayers.Font = new System.Drawing.Font("Eras Demi ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPlayers.ForeColor = System.Drawing.Color.White;
-            this.lbPlayers.Location = new System.Drawing.Point(79, 106);
+            this.lbPlayers.ForeColor = System.Drawing.Color.Black;
+            this.lbPlayers.Location = new System.Drawing.Point(144, 35);
             this.lbPlayers.Name = "lbPlayers";
             this.lbPlayers.Size = new System.Drawing.Size(73, 23);
-            this.lbPlayers.TabIndex = 10;
+            this.lbPlayers.TabIndex = 11;
             this.lbPlayers.Text = "Players";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 561);
             this.Controls.Add(this.lbPlayers);
             this.Controls.Add(this.lbSubject);
