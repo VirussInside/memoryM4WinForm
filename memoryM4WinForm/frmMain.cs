@@ -40,5 +40,27 @@ namespace memoryM4WinForm
 
 
         }
+
+        private void cbSubjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbSubjects.SelectedItem.ToString() == "Cars") {
+                MessageBox.Show("Voituressss");
+                pictureBox1.Image = Properties.Resources.car1;
+            }
+            else if (cbSubjects.SelectedItem.ToString() == "Cars")
+            {
+                MessageBox.Show("Voituressss");
+                pictureBox1.Image = Properties.Resources.car1;
+            }
+            else if (cbSubjects.SelectedItem.ToString() == "Cars")
+            {
+                MessageBox.Show("Voituressss");
+                pictureBox1.Image = Properties.Resources.car1;
+            }
+            else if (cbSubjects.SelectedItem.ToString() == "Australia")
+            {
+                pictureBox1.Image = Properties.Resources.australia1;
+            };
+        }
     }
 }

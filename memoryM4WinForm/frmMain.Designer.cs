@@ -42,8 +42,10 @@
             this.lbDifficulty = new System.Windows.Forms.Label();
             this.lbSubject = new System.Windows.Forms.Label();
             this.lbPlayers = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbPlayers.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -64,6 +66,7 @@
             // 
             this.btPlay.BackColor = System.Drawing.Color.White;
             this.btPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPlay.Font = new System.Drawing.Font("Eras Demi ITC", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPlay.ForeColor = System.Drawing.Color.BlueViolet;
             this.btPlay.Location = new System.Drawing.Point(406, 493);
@@ -79,7 +82,7 @@
             this.gbPlayers.Controls.Add(this.rbFour);
             this.gbPlayers.Controls.Add(this.rbThree);
             this.gbPlayers.Controls.Add(this.rbTwo);
-            this.gbPlayers.Location = new System.Drawing.Point(148, 61);
+            this.gbPlayers.Location = new System.Drawing.Point(146, 60);
             this.gbPlayers.Name = "gbPlayers";
             this.gbPlayers.Size = new System.Drawing.Size(210, 52);
             this.gbPlayers.TabIndex = 5;
@@ -138,7 +141,7 @@
             this.groupBox1.Controls.Add(this.rbEasy);
             this.groupBox1.Controls.Add(this.rbMedium);
             this.groupBox1.Controls.Add(this.rbHard);
-            this.groupBox1.Location = new System.Drawing.Point(148, 152);
+            this.groupBox1.Location = new System.Drawing.Point(146, 151);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(295, 94);
             this.groupBox1.TabIndex = 6;
@@ -200,18 +203,20 @@
             this.cbSubjects.Items.AddRange(new object[] {
             "Jura",
             "Cars",
-            "Nature"});
-            this.cbSubjects.Location = new System.Drawing.Point(148, 288);
+            "Nature",
+            "Australia"});
+            this.cbSubjects.Location = new System.Drawing.Point(146, 287);
             this.cbSubjects.Name = "cbSubjects";
             this.cbSubjects.Size = new System.Drawing.Size(159, 27);
             this.cbSubjects.TabIndex = 7;
+            this.cbSubjects.SelectedIndexChanged += new System.EventHandler(this.cbSubjects_SelectedIndexChanged);
             // 
             // lbDifficulty
             // 
             this.lbDifficulty.AutoSize = true;
             this.lbDifficulty.Font = new System.Drawing.Font("Eras Demi ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDifficulty.ForeColor = System.Drawing.Color.Black;
-            this.lbDifficulty.Location = new System.Drawing.Point(144, 130);
+            this.lbDifficulty.Location = new System.Drawing.Point(142, 129);
             this.lbDifficulty.Name = "lbDifficulty";
             this.lbDifficulty.Size = new System.Drawing.Size(91, 23);
             this.lbDifficulty.TabIndex = 8;
@@ -222,7 +227,7 @@
             this.lbSubject.AutoSize = true;
             this.lbSubject.Font = new System.Drawing.Font("Eras Demi ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubject.ForeColor = System.Drawing.Color.Black;
-            this.lbSubject.Location = new System.Drawing.Point(144, 262);
+            this.lbSubject.Location = new System.Drawing.Point(142, 261);
             this.lbSubject.Name = "lbSubject";
             this.lbSubject.Size = new System.Drawing.Size(76, 23);
             this.lbSubject.TabIndex = 9;
@@ -233,11 +238,20 @@
             this.lbPlayers.AutoSize = true;
             this.lbPlayers.Font = new System.Drawing.Font("Eras Demi ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPlayers.ForeColor = System.Drawing.Color.Black;
-            this.lbPlayers.Location = new System.Drawing.Point(144, 35);
+            this.lbPlayers.Location = new System.Drawing.Point(142, 34);
             this.lbPlayers.Name = "lbPlayers";
             this.lbPlayers.Size = new System.Drawing.Size(73, 23);
             this.lbPlayers.TabIndex = 11;
             this.lbPlayers.Text = "Players";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(146, 320);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(295, 154);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // frmMain
             // 
@@ -245,6 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbPlayers);
             this.Controls.Add(this.lbSubject);
             this.Controls.Add(this.lbDifficulty);
@@ -261,6 +276,7 @@
             this.gbPlayers.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,6 +298,7 @@
         private System.Windows.Forms.Label lbDifficulty;
         private System.Windows.Forms.Label lbSubject;
         private System.Windows.Forms.Label lbPlayers;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
