@@ -41,26 +41,47 @@ namespace memoryM4WinForm
 
         }
 
+
+        /// <summary>
+        /// Managing the subjects selection events
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbSubjects.SelectedItem.ToString() == "Cars") {
-                MessageBox.Show("Voituressss");
-                pictureBox1.Image = Properties.Resources.car1;
-            }
-            else if (cbSubjects.SelectedItem.ToString() == "Cars")
+            pictureBox1.Visible = true;
+
+            switch (cbSubjects.SelectedItem.ToString())
             {
-                MessageBox.Show("Voituressss");
-                pictureBox1.Image = Properties.Resources.car1;
+                case "Cars":
+                    pictureBox1.Image = Properties.Resources.car1;
+                    break;
+
+                case "Australia":
+                    pictureBox1.Image = Properties.Resources.australia1;
+                    break;
+
+                case "Jura":
+                    pictureBox1.Image = Properties.Resources.australia1;
+                    break;
+
+                case "Nature":
+                    //pictureBox1.Image = Properties.Resources.nature1;
+                    break;
+
+                default:
+                    pictureBox1.Visible = false;
+                    break;
             }
-            else if (cbSubjects.SelectedItem.ToString() == "Cars")
-            {
-                MessageBox.Show("Voituressss");
-                pictureBox1.Image = Properties.Resources.car1;
-            }
-            else if (cbSubjects.SelectedItem.ToString() == "Australia")
-            {
-                pictureBox1.Image = Properties.Resources.australia1;
-            };
+        }
+
+        private void btPlay_MouseHover(object sender, EventArgs e)
+        {
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
