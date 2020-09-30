@@ -16,5 +16,10 @@ namespace memoryM4WinForm
         {
             InitializeComponent();
         }
+
+        private void frmGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
