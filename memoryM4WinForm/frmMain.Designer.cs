@@ -87,7 +87,7 @@
             this.rbFour.AutoSize = true;
             this.rbFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbFour.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbFour.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbFour.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbFour.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFour.Location = new System.Drawing.Point(142, 33);
             this.rbFour.Name = "rbFour";
@@ -103,7 +103,7 @@
             this.rbThree.AutoSize = true;
             this.rbThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbThree.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbThree.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbThree.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbThree.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbThree.Location = new System.Drawing.Point(86, 33);
             this.rbThree.Name = "rbThree";
@@ -119,7 +119,7 @@
             this.rbTwo.AutoSize = true;
             this.rbTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbTwo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbTwo.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbTwo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbTwo.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbTwo.Location = new System.Drawing.Point(29, 33);
             this.rbTwo.Name = "rbTwo";
@@ -146,7 +146,7 @@
             this.rbEasy.AutoSize = true;
             this.rbEasy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbEasy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbEasy.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbEasy.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbEasy.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEasy.Location = new System.Drawing.Point(30, 33);
             this.rbEasy.Name = "rbEasy";
@@ -162,7 +162,7 @@
             this.rbMedium.AutoSize = true;
             this.rbMedium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbMedium.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbMedium.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbMedium.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbMedium.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMedium.Location = new System.Drawing.Point(104, 33);
             this.rbMedium.Name = "rbMedium";
@@ -178,7 +178,7 @@
             this.rbHard.AutoSize = true;
             this.rbHard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbHard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbHard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rbHard.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbHard.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbHard.Location = new System.Drawing.Point(200, 33);
             this.rbHard.Name = "rbHard";

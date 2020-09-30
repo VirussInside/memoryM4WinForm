@@ -25,20 +25,10 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void btPlay_Click(object sender, EventArgs e)
         {
-            string caption = "Hello";
-            string message = "Quitter ?";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result;
-
-            // Displays the MessageBox.
-            result = MessageBox.Show(message, caption, buttons);
-            if (result == System.Windows.Forms.DialogResult.Yes)
-            {
-                // Closes the parent form.
-                this.Close();
-            }
-
-
+            this.Hide();
+            var formScore = new frmScore();
+            formScore.Closed += (s, args) => this.Close();
+            formScore.Show();
         }
 
 
@@ -49,7 +39,7 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void cbSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;
+            pictureBox1.Show();
 
             switch (cbSubjects.SelectedItem.ToString())
             {
@@ -62,15 +52,17 @@ namespace memoryM4WinForm
                     break;
 
                 case "Jura":
-                    pictureBox1.Image = Properties.Resources.australia1;
+                    //pictureBox1.Image = Properties.Resources.jura1;
+                    pictureBox1.Hide();
                     break;
 
                 case "Nature":
                     //pictureBox1.Image = Properties.Resources.nature1;
+                    pictureBox1.Hide();
                     break;
 
                 default:
-                    pictureBox1.Visible = false;
+                    pictureBox1.Hide();
                     break;
             }
         }
