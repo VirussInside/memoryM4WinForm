@@ -1,7 +1,7 @@
-# memoryM4WinForm
+<h1>Memorize Game</h1>
 Overview of the memory game made in C#/WinForm for the M4 at EST Porrentruy
 
-<h1>Memorize Game</h1>
+<h2>Description</h2>
 Memory game also known as Pairs, Match Match... This game will have multiple subjects to choose from and different level of difficulties.
 
 <h2>Rules</h2>
