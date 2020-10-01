@@ -47,6 +47,7 @@ namespace memoryM4WinForm
         {
             this.Hide();
             var formMain = new frmMain();
+            this.Dispose();
             formMain.Closed += (s, args) => this.Close();
             formMain.Show();
         }

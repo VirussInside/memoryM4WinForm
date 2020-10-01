@@ -68,14 +68,5 @@ namespace memoryM4WinForm
                     break;
             }
         }
-
-        private void btPlay_MouseHover(object sender, EventArgs e)
-        {
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

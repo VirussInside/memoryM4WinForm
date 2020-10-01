@@ -68,7 +68,6 @@
             this.btPlay.Text = "Play";
             this.btPlay.UseVisualStyleBackColor = false;
             this.btPlay.Click += new System.EventHandler(this.btPlay_Click);
-            this.btPlay.MouseHover += new System.EventHandler(this.btPlay_MouseHover);
             // 
             // gbPlayers
             // 
@@ -263,7 +262,6 @@
             this.panGame.Name = "panGame";
             this.panGame.Size = new System.Drawing.Size(724, 650);
             this.panGame.TabIndex = 14;
-            this.panGame.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 

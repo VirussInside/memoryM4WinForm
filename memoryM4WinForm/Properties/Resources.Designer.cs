@@ -73,6 +73,16 @@ namespace memoryM4WinForm.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nature0 {
+            get {
+                object obj = ResourceManager.GetObject("nature0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nature1 {
             get {
                 object obj = ResourceManager.GetObject("nature1", resourceCulture);
@@ -136,16 +146,6 @@ namespace memoryM4WinForm.Properties {
         internal static System.Drawing.Bitmap nature7 {
             get {
                 object obj = ResourceManager.GetObject("nature7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap nature8 {
-            get {
-                object obj = ResourceManager.GetObject("nature8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
