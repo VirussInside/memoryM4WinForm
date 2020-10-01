@@ -29,21 +29,41 @@
         private void InitializeComponent()
         {
             this.panMemory = new System.Windows.Forms.Panel();
+            this.btTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panMemory
             // 
-            this.panMemory.Location = new System.Drawing.Point(11, 13);
+            this.panMemory.Location = new System.Drawing.Point(0, 0);
             this.panMemory.Name = "panMemory";
-            this.panMemory.Size = new System.Drawing.Size(614, 585);
+            this.panMemory.Size = new System.Drawing.Size(650, 650);
             this.panMemory.TabIndex = 0;
-            this.panMemory.Paint += new System.Windows.Forms.PaintEventHandler(this.panMemory_Paint);
+            // 
+            // btTest
+            // 
+            this.btTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btTest.BackColor = System.Drawing.Color.Indigo;
+            this.btTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTest.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
+            this.btTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumPurple;
+            this.btTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTest.Font = new System.Drawing.Font("Lemon/Milk", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTest.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btTest.Location = new System.Drawing.Point(601, 687);
+            this.btTest.Name = "btTest";
+            this.btTest.Size = new System.Drawing.Size(171, 62);
+            this.btTest.TabIndex = 2;
+            this.btTest.Text = "TEST";
+            this.btTest.UseVisualStyleBackColor = false;
+            this.btTest.Click += new System.EventHandler(this.btTest_Click);
             // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 611);
+            this.ClientSize = new System.Drawing.Size(784, 761);
+            this.Controls.Add(this.btTest);
             this.Controls.Add(this.panMemory);
             this.Name = "frmGame";
             this.Text = "frmGame";
@@ -55,5 +75,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panMemory;
+        private System.Windows.Forms.Button btTest;
     }
 }

@@ -63,9 +63,9 @@ namespace memoryM4WinForm.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap australia1 {
+        internal static System.Drawing.Bitmap car1 {
             get {
-                object obj = ResourceManager.GetObject("australia1", resourceCulture);
+                object obj = ResourceManager.GetObject("car1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,79 @@ namespace memoryM4WinForm.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap car1 {
+        internal static System.Drawing.Bitmap nature1 {
             get {
-                object obj = ResourceManager.GetObject("car1", resourceCulture);
+                object obj = ResourceManager.GetObject("nature1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nature2 {
+            get {
+                object obj = ResourceManager.GetObject("nature2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nature3 {
+            get {
+                object obj = ResourceManager.GetObject("nature3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nature4 {
+            get {
+                object obj = ResourceManager.GetObject("nature4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nature5 {
+            get {
+                object obj = ResourceManager.GetObject("nature5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nature6 {
+            get {
+                object obj = ResourceManager.GetObject("nature6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nature7 {
+            get {
+                object obj = ResourceManager.GetObject("nature7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nature8 {
+            get {
+                object obj = ResourceManager.GetObject("nature8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

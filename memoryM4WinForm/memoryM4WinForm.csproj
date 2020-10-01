@@ -102,14 +102,30 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\Cars\car1.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\australia1.bmp" />
+    <None Include="Resources\aarn-giri-xucZ20Vjiy8-unsplash.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image1.jpg" />
+    <None Include="Resources\andreas-gucklhorn-mawU2PoJWfU-unsplash.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\australia1.jpg" />
+    <None Include="Resources\arno-senoner-gDfRGKd8GFg-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artiom-vallat-3WQnKtahMq0-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artiom-vallat-G8ge8kHPhJU-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boris-dunand-Xme6jOaBDvM-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casey-horner-4rDCa5hBlCs-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\claudio-schwarz-purzlbaum-P7rgPubfyCA-unsplash.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

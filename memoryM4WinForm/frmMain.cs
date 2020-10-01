@@ -51,7 +51,7 @@ namespace memoryM4WinForm
                     break;
 
                 case "Australia":
-                    pictureBox1.Image = Properties.Resources.australia1;
+                    //pictureBox1.Image = Properties.Resources.australia1;
                     break;
 
                 case "Jura":
@@ -60,8 +60,7 @@ namespace memoryM4WinForm
                     break;
 
                 case "Nature":
-                    //pictureBox1.Image = Properties.Resources.nature1;
-                    pictureBox1.Hide();
+                    pictureBox1.Image = Properties.Resources.nature1;
                     break;
 
                 default:
