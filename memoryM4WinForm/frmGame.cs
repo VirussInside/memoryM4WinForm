@@ -19,7 +19,15 @@ namespace memoryM4WinForm
 
         private void frmGame_Load(object sender, EventArgs e)
         {
+            GridMemory.FillGrid(16, panMemory);
+        }
 
+        private void panMemory_Paint(object sender, PaintEventArgs e)
+        {
+            //this.Hide();
+            //var formScore = new frmScore();
+            //formScore.Closed += (s, args) => this.Close();
+            //formScore.Show();
         }
     }
 }

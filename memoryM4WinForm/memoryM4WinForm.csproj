@@ -64,7 +64,7 @@
     <Compile Include="frmScore.Designer.cs">
       <DependentUpon>frmScore.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grid.cs" />
+    <Compile Include="GridMemory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmGame.resx">

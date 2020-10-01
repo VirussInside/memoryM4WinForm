@@ -37,6 +37,7 @@
             this.panMemory.Name = "panMemory";
             this.panMemory.Size = new System.Drawing.Size(614, 585);
             this.panMemory.TabIndex = 0;
+            this.panMemory.Paint += new System.Windows.Forms.PaintEventHandler(this.panMemory_Paint);
             // 
             // frmGame
             // 

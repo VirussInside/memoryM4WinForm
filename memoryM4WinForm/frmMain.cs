@@ -25,10 +25,13 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void btPlay_Click(object sender, EventArgs e)
         {
+
+            // if fonction validation ok faire la suite sinon remplir infos plsu precises
+
             this.Hide();
-            var formScore = new frmScore();
-            formScore.Closed += (s, args) => this.Close();
-            formScore.Show();
+            var formGame = new frmGame();
+            formGame.Closed += (s, args) => this.Close();
+            formGame.Show();
         }
 
 
