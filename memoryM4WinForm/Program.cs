@@ -9,14 +9,14 @@ namespace memoryM4WinForm
     static class Program
     {
         /// <summary>
-        /// Point d'entrée principal de l'application.
+        /// Main entry point of the application
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmTitle()); // Launch title form to start game for the first time
         }
     }
 }

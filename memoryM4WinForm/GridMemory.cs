@@ -22,12 +22,16 @@ namespace memoryM4WinForm
 {
     public class GridMemory
     {
-        // Number of different images available (x2 to know the max grid size)
-        private const int IMAGES_AVAILABLE = 8; // This number MUST equal the smallest image count of each subjects to prevent blank images or errors
         
-        private static string firstClicked = "";
-        private static string secondClicked = "";
+        private const int IMAGES_AVAILABLE = 8; // This number MUST equal the smallest image count of each subjects to prevent blank images or errors (x2 to know total cards count of the game)
+        private const string CARD_BACK_NAME = "memorize_back_card"; // Name of the image resource for the cards back
+
+
+        private static PictureBox pbClicked1;
+        private static PictureBox pbClicked2;
+
         private static int attemptsCount = 0;
+        private static int clickCount = 0;
         private static frmGame gameInstanceUse;
 
 
@@ -38,18 +42,6 @@ namespace memoryM4WinForm
         public GridMemory(frmGame gameInstance)
         {
             gameInstanceUse = gameInstance;
-        }
-
-        public string FirstClicked    
-        {
-            get => firstClicked;
-            set => firstClicked = value;
-        }
-
-        public string SecondClicked    // the Name property
-        {
-            get => secondClicked;
-            set => secondClicked = value;
         }
 
         /// <summary>
@@ -73,14 +65,16 @@ namespace memoryM4WinForm
                 {
                     for (int colCount = 0; colCount < gridSize; colCount++)
                         {
-                        pbImageGrid = new PictureBox();
-                        pbImageGrid.Location = new System.Drawing.Point(x, y);
-                        pbImageGrid.Size = new System.Drawing.Size(100, 100);
-                        pbImageGrid.SizeMode = PictureBoxSizeMode.StretchImage;
-                        pbImageGrid.Image = (Image)Properties.Resources.ResourceManager.GetObject(imageList[imageCount]); // Select an image from the the list
-                        pbImageGrid.Name = imageList[imageCount];
-                        pbImageGrid.Tag = imageCount;
-                        pbImageGrid.MouseClick += ProcessClickedImage;
+                        pbImageGrid = new PictureBox
+                        {
+                            Location = new System.Drawing.Point(x, y),
+                            Size = new System.Drawing.Size(100, 100),
+                            SizeMode = PictureBoxSizeMode.StretchImage,
+                            Image = (Image)Properties.Resources.ResourceManager.GetObject("memorize_back_card"), // Puts the back image
+                            Name = imageList[imageCount], // Put the right name of the image
+                            Tag = imageCount
+                        };
+                        pbImageGrid.MouseClick += ProcessClickedImageAsync;
                         pbImageGrid.BackColor = Color.Azure;
                         panMemory.Controls.Add(pbImageGrid);
 
@@ -98,41 +92,74 @@ namespace memoryM4WinForm
         /// </summary>
         /// <param name="sender">Picturebox clicked</param>
         /// <param name="e"></param>
-        private static void ProcessClickedImage(object sender, MouseEventArgs e)
+        private static void ProcessClickedImageAsync(object sender, MouseEventArgs e)
         {
-            PictureBox clickedPic = sender as PictureBox;
-
-            if (firstClicked.Length == 0)
+            ShowCard((PictureBox)sender); // Turns the card around to show the image
+            switch (clickCount)
             {
-                firstClicked = clickedPic.Name;
-            }
-            else
-            {
-                secondClicked = clickedPic.Name;
-            }
+                // First image clicked
+                case 0:
+                    pbClicked1 = (PictureBox)sender;
+                    clickCount++;
+                    break;
+                // Second image clicked
+                case 1:
+                    if (pbClicked1.Tag != ((PictureBox)sender).Tag)
+                    {
+                        pbClicked2 = (PictureBox)sender;
+                        if (CompareCards(pbClicked1.Name, pbClicked2.Name)) // Same images
+                        {
+                            // Remove card from game and show label of attempts and points TODO ARTIOM
+                        }
+                        else // Different images so hide them again
+                        {
+                            System.Threading.Thread.Sleep(2500); // wait for 2.5 seconds to let some time to remeber the position of the card
 
+                            // HOW TO BLOCK FOR ANOTHER CLICK DURING WAIT ? 
 
-            if (firstClicked.Length >0 && secondClicked.Length >0)
-            {
-                if (firstClicked.Equals(secondClicked))
-                {
-                    MessageBox.Show("YEAH");
-                }
-                else
-                {
-                    MessageBox.Show("NOOOOOO");
-                }
-
-                firstClicked = "";
-                secondClicked = "";
-                attemptsCount++;
-
-                // HOW TO ACCESS LABEL IN ANOTHER FORM ? 
-                //gameInstanceUse.lbAttempts = attemptsCount;
+                            HideCards(pbClicked1, pbClicked2);
+                        }
+                        clickCount = 0;
+                        attemptsCount++;
+                    }
+                    break;
+                default:
+                    break;
             }
         }
 
+        /// <summary>
+        /// Changes the regular back image to the right theme image
+        /// </summary>
+        /// <param name="pictureBox">Clicked picturebox</param>
+        public static void ShowCard(PictureBox pictureBox) {
+            pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(pictureBox.Name);
+            pictureBox.Refresh();
+        }
 
+        /// <summary>
+        /// Changes the card back to default image
+        /// </summary>
+        /// <param name="pbFirst">First picturebox</param>
+        /// <param name="pbSecond">Second picturebox</param>
+        public static void HideCards(PictureBox pbFirst, PictureBox pbSecond)
+        {
+            pbFirst.Image = (Image)Properties.Resources.ResourceManager.GetObject(CARD_BACK_NAME);
+            pbSecond.Image = (Image)Properties.Resources.ResourceManager.GetObject(CARD_BACK_NAME);
+            pbFirst.Refresh();
+            pbSecond.Refresh();
+        }
+
+
+        /// <summary>
+        /// Comparing picturebox's names to know
+        /// </summary>
+        /// <param name="nameOne">First picturebox's name clicked</param>
+        /// <param name="nameTwo">Second picturebox's name cliked</param>
+        /// <returns>Boolean value of the comparison</returns>
+        public static Boolean CompareCards(String nameOne, String nameTwo) {
+            return nameOne.Equals(nameTwo);
+        }
 
 
 
@@ -146,7 +173,7 @@ namespace memoryM4WinForm
             List<string> names = new List<string>();
             for (int i = 0; i < IMAGES_AVAILABLE; i++)
             {
-                names.Add( chosenSubject.ToLower() + i);
+                names.Add(chosenSubject.ToLower() + i);
             }
             
             // Duplicate values of the list to have the same name twice

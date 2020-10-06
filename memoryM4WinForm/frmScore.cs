@@ -34,6 +34,9 @@ namespace memoryM4WinForm
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
+                Dispose();
+                GC.Collect();
+                Application.Exit();
             }
         }
 

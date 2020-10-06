@@ -73,6 +73,26 @@ namespace memoryM4WinForm.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap memorize_back_card {
+            get {
+                object obj = ResourceManager.GetObject("memorize_back_card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap memorize_title_continue {
+            get {
+                object obj = ResourceManager.GetObject("memorize_title_continue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nature0 {
             get {
                 object obj = ResourceManager.GetObject("nature0", resourceCulture);

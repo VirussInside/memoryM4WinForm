@@ -28,9 +28,9 @@ namespace memoryM4WinForm
         {
             this.Hide();
             var formScore = new frmScore();
+            formScore.Closed += (s, args) => this.Close();
             this.Dispose();
             GC.Collect();
-            formScore.Closed += (s, args) => this.Close();
             formScore.Show();
         }
     }

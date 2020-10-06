@@ -25,7 +25,6 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void btPlay_Click(object sender, EventArgs e)
         {
-
             // if fonction validation ok faire la suite sinon remplir infos plsu precises
 
             this.Hide();
@@ -42,12 +41,12 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void cbSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pictureBox1.Show();
+            pbPreview.Show();
 
             switch (cbSubjects.SelectedItem.ToString())
             {
                 case "Cars":
-                    pictureBox1.Image = Properties.Resources.car1;
+                    pbPreview.Image = Properties.Resources.car1;
                     break;
 
                 case "Australia":
@@ -56,15 +55,15 @@ namespace memoryM4WinForm
 
                 case "Jura":
                     //pictureBox1.Image = Properties.Resources.jura1;
-                    pictureBox1.Hide();
+                    pbPreview.Hide();
                     break;
 
                 case "Nature":
-                    pictureBox1.Image = Properties.Resources.nature1;
+                    pbPreview.Image = Properties.Resources.nature1;
                     break;
 
                 default:
-                    pictureBox1.Hide();
+                    pbPreview.Hide();
                     break;
             }
         }

@@ -43,11 +43,11 @@
             this.lbPlayers = new System.Windows.Forms.Label();
             this.lbGameTitle = new System.Windows.Forms.Label();
             this.panGame = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbPreview = new System.Windows.Forms.PictureBox();
             this.gbPlayers.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panGame.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // btPlay
@@ -263,14 +263,14 @@
             this.panGame.Size = new System.Drawing.Size(724, 650);
             this.panGame.TabIndex = 14;
             // 
-            // pictureBox1
+            // pbPreview
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(298, 217);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.pbPreview.Location = new System.Drawing.Point(298, 217);
+            this.pbPreview.Name = "pbPreview";
+            this.pbPreview.Size = new System.Drawing.Size(200, 200);
+            this.pbPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPreview.TabIndex = 12;
+            this.pbPreview.TabStop = false;
             // 
             // frmMain
             // 
@@ -278,7 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 611);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbPreview);
             this.Controls.Add(this.lbPlayers);
             this.Controls.Add(this.lbSubject);
             this.Controls.Add(this.lbDifficulty);
@@ -297,7 +297,7 @@
             this.groupBox1.PerformLayout();
             this.panGame.ResumeLayout(false);
             this.panGame.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,7 +317,7 @@
         private System.Windows.Forms.Label lbDifficulty;
         private System.Windows.Forms.Label lbSubject;
         private System.Windows.Forms.Label lbPlayers;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPreview;
         private System.Windows.Forms.Label lbGameTitle;
         private System.Windows.Forms.Panel panGame;
     }
