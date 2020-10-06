@@ -128,6 +128,7 @@ namespace memoryM4WinForm
             }
         }
 
+
         /// <summary>
         /// Changes the regular back image to the right theme image
         /// </summary>
