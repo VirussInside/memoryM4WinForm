@@ -196,7 +196,7 @@
             this.cbSubjects.Items.AddRange(new object[] {
             "Australia",
             "Cars",
-            "Jura",
+            "Food",
             "Nature"});
             this.cbSubjects.Location = new System.Drawing.Point(45, 217);
             this.cbSubjects.Name = "cbSubjects";
@@ -254,7 +254,7 @@
             // 
             this.panGame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panGame.BackColor = System.Drawing.Color.Lavender;
+            this.panGame.BackColor = System.Drawing.Color.DeepPink;
             this.panGame.Controls.Add(this.lbGameTitle);
             this.panGame.Controls.Add(this.btPlay);
             this.panGame.Location = new System.Drawing.Point(-85, 477);

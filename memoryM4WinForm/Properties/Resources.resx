@@ -118,8 +118,113 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="australia1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="australia9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\australia optimised\australia9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="car1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Images\Cars\car1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\cars optimised\car1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="car9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cars optimised\car9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="memorize_back_card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\memorize_back_card.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,28 +232,112 @@
   <data name="memorize_title_continue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\memorize_title_continue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nature0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\claudio-schwarz-purzlbaum-P7rgPubfyCA-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="nature1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aarn-giri-xucZ20Vjiy8-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\nature optimised\nature1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature14.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature18.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nature2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\andreas-gucklhorn-mawU2PoJWfU-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\nature optimised\nature2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature23.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature25.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature26.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature27.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature28.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature29.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nature3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arno-senoner-gDfRGKd8GFg-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\nature optimised\nature3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature30.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature31.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature32.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature33.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature34.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature35.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature36.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nature4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\artiom-vallat-3WQnKtahMq0-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\nature optimised\nature4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nature5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\artiom-vallat-G8ge8kHPhJU-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\nature optimised\nature5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nature6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boris-dunand-Xme6jOaBDvM-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\nature optimised\nature6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nature7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\casey-horner-4rDCa5hBlCs-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\nature optimised\nature7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nature9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\nature optimised\nature9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

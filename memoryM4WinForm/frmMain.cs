@@ -50,11 +50,11 @@ namespace memoryM4WinForm
                     break;
 
                 case "Australia":
-                    //pictureBox1.Image = Properties.Resources.australia1;
+                    pbPreview.Image = Properties.Resources.australia1;
                     break;
 
-                case "Jura":
-                    //pictureBox1.Image = Properties.Resources.jura1;
+                case "Food":
+                    //pbPreview.Image = Properties.Resources.food1;
                     pbPreview.Hide();
                     break;
 

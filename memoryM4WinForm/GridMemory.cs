@@ -26,7 +26,6 @@ namespace memoryM4WinForm
         private const int IMAGES_AVAILABLE = 8; // This number MUST equal the smallest image count of each subjects to prevent blank images or errors (x2 to know total cards count of the game)
         private const string CARD_BACK_NAME = "memorize_back_card"; // Name of the image resource for the cards back
 
-
         private static PictureBox pbClicked1;
         private static PictureBox pbClicked2;
 
