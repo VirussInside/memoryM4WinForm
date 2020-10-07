@@ -11,18 +11,18 @@ namespace memoryM4WinForm
         /// <summary>
         /// Enumeration of possible difficulties, easy starts at 4 as its the minimum 4x4 grid of images
         /// </summary>
-        enum Difficulty
-        {
-            EASY = 4,
-            MEDIUM,
-            HARD
-        }
+        //enum Difficulty
+        //{
+        //    EASY = 4,
+        //    MEDIUM,
+        //    HARD
+        //}
 
 
         /// <summary>
         /// Enumeration of the available subjects
         /// </summary>
-        enum Subject
+        enum Subject_Theme
         {
             AUSTRALIA,
             FOOD,
@@ -31,10 +31,22 @@ namespace memoryM4WinForm
         }
 
         // Settings fields
-        private Difficulty myDifficulty;
+        private int myDifficulty;
         private int playerCount;
+        private Subject_Theme _subject;
 
-        public Settings() {
+        /// <summary>
+        /// Property for the difficulty
+        /// </summary>
+        public int Difficulty
+        {
+            get => myDifficulty;
+            set => myDifficulty = value;
+        }
+
+
+        public Settings()
+        {
         }
 
 

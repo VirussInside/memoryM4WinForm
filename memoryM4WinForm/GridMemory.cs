@@ -26,12 +26,12 @@ namespace memoryM4WinForm
         private const int IMAGES_AVAILABLE = 8; // This number MUST equal the smallest image count of each subjects to prevent blank images or errors (x2 to know total cards count of the game)
         private const string CARD_BACK_NAME = "memorize_back_card"; // Name of the image resource for the cards back
 
-        private static PictureBox pbClicked1;
-        private static PictureBox pbClicked2;
+        private PictureBox pbClicked1;
+        private PictureBox pbClicked2;
 
-        private static int attemptsCount = 0;
-        private static int clickCount = 0;
-        private static frmGame gameInstanceUse;
+        private int attemptsCount = 0;
+        private int clickCount = 0;
+        private frmGame frmGameInstance;
 
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace memoryM4WinForm
         /// <param name="frmGameInstance">Instance of the game form</param>
         public GridMemory(frmGame gameInstance)
         {
-            gameInstanceUse = gameInstance;
+            frmGameInstance = gameInstance;
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace memoryM4WinForm
                             Name = imageList[imageCount], // Put the right name of the image
                             Tag = imageCount
                         };
-                        pbImageGrid.MouseClick += ProcessClickedImageAsync;
+                        pbImageGrid.MouseClick += ProcessClickedImage;
                         pbImageGrid.BackColor = Color.Azure;
                         panMemory.Controls.Add(pbImageGrid);
 
@@ -91,7 +91,7 @@ namespace memoryM4WinForm
         /// </summary>
         /// <param name="sender">Picturebox clicked</param>
         /// <param name="e"></param>
-        private static void ProcessClickedImageAsync(object sender, MouseEventArgs e)
+        private void ProcessClickedImage(object sender, MouseEventArgs e)
         {
             ShowCard((PictureBox)sender); // Turns the card around to show the image
             switch (clickCount)
@@ -109,6 +109,9 @@ namespace memoryM4WinForm
                         if (CompareCards(pbClicked1.Name, pbClicked2.Name)) // Same images
                         {
                             // Remove card from game and show label of attempts and points TODO ARTIOM
+                            pbClicked1.Hide();
+                            pbClicked2.Hide();
+                            frmGameInstance.CheckWin();
                         }
                         else // Different images so hide them again
                         {
@@ -125,14 +128,19 @@ namespace memoryM4WinForm
                 default:
                     break;
             }
+
+            frmGameInstance.SetTextForLabel(attemptsCount,attemptsCount,"Artiom");
         }
+
+
+       
 
 
         /// <summary>
         /// Changes the regular back image to the right theme image
         /// </summary>
         /// <param name="pictureBox">Clicked picturebox</param>
-        public static void ShowCard(PictureBox pictureBox) {
+        public void ShowCard(PictureBox pictureBox) {
             pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(pictureBox.Name);
             pictureBox.Refresh();
         }
@@ -142,7 +150,7 @@ namespace memoryM4WinForm
         /// </summary>
         /// <param name="pbFirst">First picturebox</param>
         /// <param name="pbSecond">Second picturebox</param>
-        public static void HideCards(PictureBox pbFirst, PictureBox pbSecond)
+        public void HideCards(PictureBox pbFirst, PictureBox pbSecond)
         {
             pbFirst.Image = (Image)Properties.Resources.ResourceManager.GetObject(CARD_BACK_NAME);
             pbSecond.Image = (Image)Properties.Resources.ResourceManager.GetObject(CARD_BACK_NAME);
@@ -157,7 +165,7 @@ namespace memoryM4WinForm
         /// <param name="nameOne">First picturebox's name clicked</param>
         /// <param name="nameTwo">Second picturebox's name cliked</param>
         /// <returns>Boolean value of the comparison</returns>
-        public static Boolean CompareCards(String nameOne, String nameTwo) {
+        public Boolean CompareCards(String nameOne, String nameTwo) {
             return nameOne.Equals(nameTwo);
         }
 
@@ -168,10 +176,10 @@ namespace memoryM4WinForm
         /// </summary>
         /// <param name="chosenSubject">Name of the chosen subject</param>
         /// <returns>List of unsorted imagenames with the same name twice</returns>
-        private static List<string> GenerateImageNames(String chosenSubject)
+        private List<string> GenerateImageNames(String chosenSubject)
         {
             List<string> names = new List<string>();
-            for (int i = 0; i < IMAGES_AVAILABLE; i++)
+            for (int i = 1; i <= IMAGES_AVAILABLE; i++)
             {
                 names.Add(chosenSubject.ToLower() + i);
             }
@@ -187,7 +195,7 @@ namespace memoryM4WinForm
         /// </summary>
         /// <param name="imageNames">List of imagenames</param>
         /// <returns>List of shuffled strings</returns>
-        private static List<string> ShuffleImages(List<string> imageNames)
+        private List<string> ShuffleImages(List<string> imageNames)
         {
             List<string> shuffledImages = imageNames;
             shuffledImages = imageNames.OrderBy(x => Guid.NewGuid().ToString()).ToList();
