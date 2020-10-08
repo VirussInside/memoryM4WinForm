@@ -25,14 +25,33 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void btPlay_Click(object sender, EventArgs e)
         {
-            // if fonction validation ok faire la suite sinon remplir infos plsu precises
-
-            this.Hide();
-            var formGame = new frmGame();
-            formGame.Closed += (s, args) => this.Close();
-            formGame.Show();
+            // Checking if all settings are correct
+            if (ValidateSettings())
+            {
+                this.Hide();
+                var formGame = new frmGame(cbSubjects.Text, 36);
+                formGame.Closed += (s, args) => this.Close();
+                formGame.Show();
+            }
+            else
+            {
+                MessageBox.Show("Some settings are missing !");
+            }
+            
         }
 
+        /// <summary>
+        /// Check if all settings needed are filled and correct
+        /// </summary>
+        /// <returns>Boolean value if settings are correct</returns>
+        private Boolean ValidateSettings() {
+            Boolean validSettings = true;
+
+            if (cbSubjects.Text.Equals(""))
+                validSettings = false;
+
+            return validSettings;
+        }
 
         /// <summary>
         /// Managing the subjects selection events
@@ -45,7 +64,7 @@ namespace memoryM4WinForm
 
             switch (cbSubjects.SelectedItem.ToString())
             {
-                case "Cars":
+                case "Car":
                     pbPreview.Image = Properties.Resources.car1;
                     break;
 

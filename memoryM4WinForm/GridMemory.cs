@@ -23,7 +23,6 @@ namespace memoryM4WinForm
     public class GridMemory
     {
         
-        private const int IMAGES_AVAILABLE = 8; // This number MUST equal the smallest image count of each subjects to prevent blank images or errors (x2 to know total cards count of the game)
         private const string CARD_BACK_NAME = "memorize_back_card"; // Name of the image resource for the cards back
 
         private PictureBox pbClicked1;
@@ -42,18 +41,21 @@ namespace memoryM4WinForm
         {
             frmGameInstance = gameInstance;
         }
+       
 
         /// <summary>
         /// Filling the grid of memory cards inside a panel
         /// </summary>
         /// <param name="cardCount">Number of cards that will be displayed regarding the difficulty</param>
+        /// <param name="panMemory">Panel that will contain the cards</param>
+        /// <param name="SubjectChoice">Name of the subject for the images</param>
         public void FillGrid(int cardCount, Panel panMemory, string SubjectChoice)
         {
             int gridSize = 0;
             int imageCount = 0;
             int x = 0;
             int y = 0;
-            List<string> imageList = GenerateImageNames(SubjectChoice);
+            List<string> imageList = GenerateImageNames(SubjectChoice, cardCount);
 
             PictureBox pbImageGrid;
 
@@ -108,6 +110,7 @@ namespace memoryM4WinForm
                         pbClicked2 = (PictureBox)sender;
                         if (CompareCards(pbClicked1.Name, pbClicked2.Name)) // Same images
                         {
+                            System.Threading.Thread.Sleep(750);
                             // Remove card from game and show label of attempts and points TODO ARTIOM
                             pbClicked1.Hide();
                             pbClicked2.Hide();
@@ -115,11 +118,9 @@ namespace memoryM4WinForm
                         }
                         else // Different images so hide them again
                         {
-                            System.Threading.Thread.Sleep(2500); // wait for 2.5 seconds to let some time to remeber the position of the card
-
-                            // HOW TO BLOCK FOR ANOTHER CLICK DURING WAIT ? 
-
+                            System.Threading.Thread.Sleep(1000); // wait for 2.5 seconds to let some time to remember the position of the card
                             HideCards(pbClicked1, pbClicked2);
+                            // HOW TO BLOCK FOR ANOTHER CLICK DURING WAIT ? 
                         }
                         clickCount = 0;
                         attemptsCount++;
@@ -176,10 +177,10 @@ namespace memoryM4WinForm
         /// </summary>
         /// <param name="chosenSubject">Name of the chosen subject</param>
         /// <returns>List of unsorted imagenames with the same name twice</returns>
-        private List<string> GenerateImageNames(String chosenSubject)
+        private List<string> GenerateImageNames(String chosenSubject, int cardCount)
         {
             List<string> names = new List<string>();
-            for (int i = 1; i <= IMAGES_AVAILABLE; i++)
+            for (int i = 1; i <= cardCount/2; i++)
             {
                 names.Add(chosenSubject.ToLower() + i);
             }
@@ -187,7 +188,7 @@ namespace memoryM4WinForm
             // Duplicate values of the list to have the same name twice
             names = names.SelectMany(t => Enumerable.Repeat(t, 2)).ToList();
 
-            return ShuffleImages(names); // Shuffle image before returning
+            return ShuffleImages(names); // Shuffle images before returning the list
         }
 
         /// <summary>

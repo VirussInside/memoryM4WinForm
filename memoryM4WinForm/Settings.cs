@@ -8,16 +8,29 @@ namespace memoryM4WinForm
 {
     class Settings
     {
+
+        // Settings fields
+        private int myDifficulty;
+        private int playerCount;
+        private int mySubject;
+
+
+        /// <summary>
+        /// Settings constructor
+        /// </summary>
+        public Settings()
+        {
+        }
+
         /// <summary>
         /// Enumeration of possible difficulties, easy starts at 4 as its the minimum 4x4 grid of images
         /// </summary>
-        //enum Difficulty
-        //{
-        //    EASY = 4,
-        //    MEDIUM,
-        //    HARD
-        //}
-
+        enum DifficultyLevel
+        {
+            EASY = 4,
+            MEDIUM,
+            HARD
+        }
 
         /// <summary>
         /// Enumeration of the available subjects
@@ -30,11 +43,6 @@ namespace memoryM4WinForm
             NATURE
         }
 
-        // Settings fields
-        private int myDifficulty;
-        private int playerCount;
-        private Subject_Theme _subject;
-
         /// <summary>
         /// Property for the difficulty
         /// </summary>
@@ -44,10 +52,15 @@ namespace memoryM4WinForm
             set => myDifficulty = value;
         }
 
-
-        public Settings()
+        /// <summary>
+        /// Property for the difficulty
+        /// </summary>
+        public int Subject
         {
+            get => mySubject;
+            set => mySubject = value;
         }
+
 
 
 

@@ -12,9 +12,14 @@ namespace memoryM4WinForm
 {
     public partial class frmGame : Form
     {
-        public frmGame()
+        private string chosenSubject;
+        private int chosenDifficulty;
+
+        public frmGame(string Subject, int difficulty)
         {
             InitializeComponent();
+            chosenSubject = Subject.ToLower();
+            chosenDifficulty = difficulty;
         }
 
         /// <summary>
@@ -27,7 +32,7 @@ namespace memoryM4WinForm
             GridMemory gridTest = new GridMemory(this);
 
             // RECUP SETTINGS POUR CREER BON GRID ET NOMBRE JOUEUR
-            gridTest.FillGrid(16, panMemory, "nature");
+            gridTest.FillGrid(chosenDifficulty, panMemory, chosenSubject);
         }
 
 

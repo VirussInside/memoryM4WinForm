@@ -33,7 +33,7 @@
             this.rbFour = new System.Windows.Forms.RadioButton();
             this.rbThree = new System.Windows.Forms.RadioButton();
             this.rbTwo = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbDifficulty = new System.Windows.Forms.GroupBox();
             this.rbEasy = new System.Windows.Forms.RadioButton();
             this.rbMedium = new System.Windows.Forms.RadioButton();
             this.rbHard = new System.Windows.Forms.RadioButton();
@@ -45,7 +45,7 @@
             this.panGame = new System.Windows.Forms.Panel();
             this.pbPreview = new System.Windows.Forms.PictureBox();
             this.gbPlayers.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbDifficulty.SuspendLayout();
             this.panGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).BeginInit();
             this.SuspendLayout();
@@ -83,61 +83,68 @@
             // rbFour
             // 
             this.rbFour.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbFour.AutoSize = true;
             this.rbFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbFour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbFour.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.rbFour.FlatAppearance.BorderSize = 2;
             this.rbFour.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbFour.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFour.Location = new System.Drawing.Point(142, 33);
             this.rbFour.Name = "rbFour";
-            this.rbFour.Size = new System.Drawing.Size(31, 33);
+            this.rbFour.Size = new System.Drawing.Size(40, 40);
             this.rbFour.TabIndex = 2;
             this.rbFour.TabStop = true;
-            this.rbFour.Text = "4";
+            this.rbFour.Text = "IA";
+            this.rbFour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbFour.UseVisualStyleBackColor = false;
             // 
             // rbThree
             // 
             this.rbThree.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbThree.AutoSize = true;
             this.rbThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbThree.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbThree.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.rbThree.FlatAppearance.BorderSize = 2;
             this.rbThree.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbThree.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbThree.Location = new System.Drawing.Point(86, 33);
             this.rbThree.Name = "rbThree";
-            this.rbThree.Size = new System.Drawing.Size(29, 33);
+            this.rbThree.Size = new System.Drawing.Size(40, 40);
             this.rbThree.TabIndex = 1;
             this.rbThree.TabStop = true;
-            this.rbThree.Text = "3";
+            this.rbThree.Text = "2";
+            this.rbThree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbThree.UseVisualStyleBackColor = false;
             // 
             // rbTwo
             // 
             this.rbTwo.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbTwo.AutoSize = true;
             this.rbTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rbTwo.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbTwo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbTwo.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.rbTwo.FlatAppearance.BorderSize = 2;
             this.rbTwo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbTwo.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTwo.Location = new System.Drawing.Point(29, 33);
+            this.rbTwo.Location = new System.Drawing.Point(25, 33);
             this.rbTwo.Name = "rbTwo";
-            this.rbTwo.Size = new System.Drawing.Size(30, 33);
+            this.rbTwo.Size = new System.Drawing.Size(40, 40);
             this.rbTwo.TabIndex = 0;
             this.rbTwo.TabStop = true;
-            this.rbTwo.Text = "2";
+            this.rbTwo.Text = "1";
+            this.rbTwo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbTwo.UseVisualStyleBackColor = false;
             // 
-            // groupBox1
+            // gbDifficulty
             // 
-            this.groupBox1.Controls.Add(this.rbEasy);
-            this.groupBox1.Controls.Add(this.rbMedium);
-            this.groupBox1.Controls.Add(this.rbHard);
-            this.groupBox1.Location = new System.Drawing.Point(298, 68);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(295, 94);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
+            this.gbDifficulty.Controls.Add(this.rbEasy);
+            this.gbDifficulty.Controls.Add(this.rbMedium);
+            this.gbDifficulty.Controls.Add(this.rbHard);
+            this.gbDifficulty.Location = new System.Drawing.Point(298, 68);
+            this.gbDifficulty.Name = "gbDifficulty";
+            this.gbDifficulty.Size = new System.Drawing.Size(295, 94);
+            this.gbDifficulty.TabIndex = 6;
+            this.gbDifficulty.TabStop = false;
             // 
             // rbEasy
             // 
@@ -145,6 +152,8 @@
             this.rbEasy.AutoSize = true;
             this.rbEasy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbEasy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbEasy.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.rbEasy.FlatAppearance.BorderSize = 2;
             this.rbEasy.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbEasy.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEasy.Location = new System.Drawing.Point(30, 33);
@@ -161,6 +170,8 @@
             this.rbMedium.AutoSize = true;
             this.rbMedium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbMedium.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbMedium.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.rbMedium.FlatAppearance.BorderSize = 2;
             this.rbMedium.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbMedium.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMedium.Location = new System.Drawing.Point(104, 33);
@@ -177,6 +188,8 @@
             this.rbHard.AutoSize = true;
             this.rbHard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.rbHard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbHard.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.rbHard.FlatAppearance.BorderSize = 2;
             this.rbHard.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbHard.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbHard.Location = new System.Drawing.Point(200, 33);
@@ -195,7 +208,7 @@
             this.cbSubjects.FormattingEnabled = true;
             this.cbSubjects.Items.AddRange(new object[] {
             "Australia",
-            "Cars",
+            "Car",
             "Food",
             "Nature"});
             this.cbSubjects.Location = new System.Drawing.Point(45, 217);
@@ -242,11 +255,11 @@
             // 
             this.lbGameTitle.AutoSize = true;
             this.lbGameTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbGameTitle.Font = new System.Drawing.Font("Lemon/Milk", 55F, System.Drawing.FontStyle.Italic);
+            this.lbGameTitle.Font = new System.Drawing.Font("Lemon/Milk", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGameTitle.ForeColor = System.Drawing.Color.White;
             this.lbGameTitle.Location = new System.Drawing.Point(79, 20);
             this.lbGameTitle.Name = "lbGameTitle";
-            this.lbGameTitle.Size = new System.Drawing.Size(426, 105);
+            this.lbGameTitle.Size = new System.Drawing.Size(428, 103);
             this.lbGameTitle.TabIndex = 13;
             this.lbGameTitle.Text = "Memorize";
             // 
@@ -254,7 +267,7 @@
             // 
             this.panGame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panGame.BackColor = System.Drawing.Color.DeepPink;
+            this.panGame.BackColor = System.Drawing.Color.DarkViolet;
             this.panGame.Controls.Add(this.lbGameTitle);
             this.panGame.Controls.Add(this.btPlay);
             this.panGame.Location = new System.Drawing.Point(-85, 477);
@@ -283,7 +296,7 @@
             this.Controls.Add(this.lbSubject);
             this.Controls.Add(this.lbDifficulty);
             this.Controls.Add(this.cbSubjects);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbDifficulty);
             this.Controls.Add(this.gbPlayers);
             this.Controls.Add(this.panGame);
             this.Font = new System.Drawing.Font("Eras Demi ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -292,9 +305,8 @@
             this.Name = "frmMain";
             this.Text = "Memorize";
             this.gbPlayers.ResumeLayout(false);
-            this.gbPlayers.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbDifficulty.ResumeLayout(false);
+            this.gbDifficulty.PerformLayout();
             this.panGame.ResumeLayout(false);
             this.panGame.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreview)).EndInit();
@@ -306,7 +318,7 @@
         #endregion
         private System.Windows.Forms.Button btPlay;
         private System.Windows.Forms.GroupBox gbPlayers;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbDifficulty;
         private System.Windows.Forms.ComboBox cbSubjects;
         private System.Windows.Forms.RadioButton rbFour;
         private System.Windows.Forms.RadioButton rbThree;
