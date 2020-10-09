@@ -161,6 +161,7 @@
             this.rbEasy.Size = new System.Drawing.Size(59, 33);
             this.rbEasy.TabIndex = 3;
             this.rbEasy.TabStop = true;
+            this.rbEasy.Tag = "4";
             this.rbEasy.Text = "Easy";
             this.rbEasy.UseVisualStyleBackColor = false;
             // 
@@ -179,6 +180,7 @@
             this.rbMedium.Size = new System.Drawing.Size(84, 33);
             this.rbMedium.TabIndex = 2;
             this.rbMedium.TabStop = true;
+            this.rbMedium.Tag = "5";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = false;
             // 
@@ -197,6 +199,7 @@
             this.rbHard.Size = new System.Drawing.Size(64, 33);
             this.rbHard.TabIndex = 1;
             this.rbHard.TabStop = true;
+            this.rbHard.Tag = "6";
             this.rbHard.Text = "Hard";
             this.rbHard.UseVisualStyleBackColor = false;
             // 

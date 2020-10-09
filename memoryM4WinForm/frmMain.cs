@@ -25,11 +25,13 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void btPlay_Click(object sender, EventArgs e)
         {
+            Settings gameSettings = new Settings(6, 1, cbSubjects.Text);
+
             // Checking if all settings are correct
             if (ValidateSettings())
             {
                 this.Hide();
-                var formGame = new frmGame(cbSubjects.Text, 36);
+                var formGame = new frmGame(gameSettings);
                 formGame.Closed += (s, args) => this.Close();
                 formGame.Show();
             }

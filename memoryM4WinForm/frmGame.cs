@@ -14,12 +14,16 @@ namespace memoryM4WinForm
     {
         private string chosenSubject;
         private int chosenDifficulty;
+        private int cardsCount;
+        private Settings gameSettings;
 
-        public frmGame(string Subject, int difficulty)
+        public frmGame(Settings SettingsGame)
         {
             InitializeComponent();
-            chosenSubject = Subject.ToLower();
-            chosenDifficulty = difficulty;
+            gameSettings = SettingsGame;
+            chosenSubject = SettingsGame.Subject.ToLower();
+            chosenDifficulty = SettingsGame.Difficulty;
+            cardsCount = SettingsGame.CardsCount;
         }
 
         /// <summary>
@@ -30,13 +34,9 @@ namespace memoryM4WinForm
         private void frmGame_Load(object sender, EventArgs e)
         {
             GridMemory gridTest = new GridMemory(this);
-
-            // RECUP SETTINGS POUR CREER BON GRID ET NOMBRE JOUEUR
-            gridTest.FillGrid(chosenDifficulty, panMemory, chosenSubject);
+            gridTest.FillGrid(cardsCount, panMemory, chosenSubject);
         }
 
-
-       
 
         /// <summary>
         /// Verify if all images have been found by checking if they are hidden

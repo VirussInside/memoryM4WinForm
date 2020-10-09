@@ -6,20 +6,25 @@ using System.Threading.Tasks;
 
 namespace memoryM4WinForm
 {
-    class Settings
+    public class Settings
     {
 
         // Settings fields
         private int myDifficulty;
-        private int playerCount;
-        private int mySubject;
+        private int myPlayerCount;
+        private int myCardsCount;
+        private string mySubject;
 
 
         /// <summary>
         /// Settings constructor
         /// </summary>
-        public Settings()
+        public Settings(int Difficulty = 4, int PlayerCount = 1, string Subject = "nature")
         {
+            myDifficulty = Difficulty;
+            myPlayerCount = PlayerCount;
+            mySubject = Subject;
+            myCardsCount = (int)Math.Pow(Difficulty,2);
         }
 
         /// <summary>
@@ -33,17 +38,6 @@ namespace memoryM4WinForm
         }
 
         /// <summary>
-        /// Enumeration of the available subjects
-        /// </summary>
-        enum Subject_Theme
-        {
-            AUSTRALIA,
-            FOOD,
-            CARS,
-            NATURE
-        }
-
-        /// <summary>
         /// Property for the difficulty
         /// </summary>
         public int Difficulty
@@ -53,12 +47,29 @@ namespace memoryM4WinForm
         }
 
         /// <summary>
-        /// Property for the difficulty
+        /// Property for the subject
         /// </summary>
-        public int Subject
+        public String Subject
         {
             get => mySubject;
             set => mySubject = value;
+        }
+
+        /// <summary>
+        /// Property for the number of cards
+        /// </summary>
+        public int CardsCount
+        {
+            get => myCardsCount;
+        }
+
+        /// <summary>
+        /// Property for the subject
+        /// </summary>
+        public int PlayerCount
+        {
+            get => myPlayerCount;
+            set => myPlayerCount = value;
         }
 
 
