@@ -15,6 +15,7 @@ namespace memoryM4WinForm
         public frmTitle()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void pbMemorizeTitle_Click(object sender, EventArgs e)

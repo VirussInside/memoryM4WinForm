@@ -15,6 +15,7 @@ namespace memoryM4WinForm
         public frmMain()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
 
@@ -25,7 +26,7 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void btPlay_Click(object sender, EventArgs e)
         {
-            Settings gameSettings = new Settings(6, 1, cbSubjects.Text);
+            Settings gameSettings = GetSettings();
 
             // Checking if all settings are correct
             if (ValidateSettings())
@@ -53,6 +54,50 @@ namespace memoryM4WinForm
                 validSettings = false;
 
             return validSettings;
+        }
+
+        /// <summary>
+        /// Collect game settings before creating the game
+        /// </summary>
+        /// <returns>Settings object</returns>
+        private Settings GetSettings()
+        {
+            int playerCount = 1;
+            int difficulty = 3;
+            string subject = "nature";
+
+            foreach (Control c in gbPlayers.Controls)
+            {
+                if (c.GetType() == typeof(RadioButton))
+                {
+                    RadioButton rbPlayer = c as RadioButton;
+                    if (rbPlayer.Checked)
+                    {
+                        playerCount = Int32.Parse(rbPlayer.Tag.ToString());
+                    }
+                }
+            }
+
+            foreach (Control c in gbDifficulty.Controls)
+            {
+                if (c.GetType() == typeof(RadioButton))
+                {
+                    RadioButton rbDifficulty = c as RadioButton;
+                    if (rbDifficulty.Checked)
+                    {
+                        difficulty = Int32.Parse(rbDifficulty.Tag.ToString());
+                    }
+                }
+            }
+
+            if (ValidateSettings())
+            {
+                subject = cbSubjects.Text;
+            }
+
+            Settings collectedSettings = new Settings(difficulty,playerCount,subject);
+
+            return collectedSettings;
         }
 
         /// <summary>

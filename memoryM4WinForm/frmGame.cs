@@ -20,10 +20,12 @@ namespace memoryM4WinForm
         public frmGame(Settings SettingsGame)
         {
             InitializeComponent();
+            
             gameSettings = SettingsGame;
             chosenSubject = SettingsGame.Subject.ToLower();
             chosenDifficulty = SettingsGame.Difficulty;
             cardsCount = SettingsGame.CardsCount;
+            SetGameWindowSize(cardsCount);
         }
 
         /// <summary>
@@ -95,6 +97,16 @@ namespace memoryM4WinForm
         private void Exit_Game(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        /// <summary>
+        /// Sets the size of the game window so it fits right regarding the difficulty
+        /// </summary>
+        private void SetGameWindowSize(int gameCardsCount) {
+
+            int gameSize = chosenDifficulty*100+200;
+            Size = new Size(gameSize, gameSize);
+            CenterToScreen();
         }
 
         private void label2_Click(object sender, EventArgs e)

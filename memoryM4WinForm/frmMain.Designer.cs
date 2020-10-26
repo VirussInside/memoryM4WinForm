@@ -30,9 +30,9 @@
         {
             this.btPlay = new System.Windows.Forms.Button();
             this.gbPlayers = new System.Windows.Forms.GroupBox();
-            this.rbFour = new System.Windows.Forms.RadioButton();
-            this.rbThree = new System.Windows.Forms.RadioButton();
+            this.rbIA = new System.Windows.Forms.RadioButton();
             this.rbTwo = new System.Windows.Forms.RadioButton();
+            this.rbOne = new System.Windows.Forms.RadioButton();
             this.gbDifficulty = new System.Windows.Forms.GroupBox();
             this.rbEasy = new System.Windows.Forms.RadioButton();
             this.rbMedium = new System.Windows.Forms.RadioButton();
@@ -71,69 +71,73 @@
             // 
             // gbPlayers
             // 
-            this.gbPlayers.Controls.Add(this.rbFour);
-            this.gbPlayers.Controls.Add(this.rbThree);
+            this.gbPlayers.Controls.Add(this.rbIA);
             this.gbPlayers.Controls.Add(this.rbTwo);
+            this.gbPlayers.Controls.Add(this.rbOne);
             this.gbPlayers.Location = new System.Drawing.Point(45, 68);
             this.gbPlayers.Name = "gbPlayers";
             this.gbPlayers.Size = new System.Drawing.Size(210, 94);
             this.gbPlayers.TabIndex = 5;
             this.gbPlayers.TabStop = false;
             // 
-            // rbFour
+            // rbIA
             // 
-            this.rbFour.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbFour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.rbFour.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbFour.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
-            this.rbFour.FlatAppearance.BorderSize = 2;
-            this.rbFour.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.rbFour.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFour.Location = new System.Drawing.Point(142, 33);
-            this.rbFour.Name = "rbFour";
-            this.rbFour.Size = new System.Drawing.Size(40, 40);
-            this.rbFour.TabIndex = 2;
-            this.rbFour.TabStop = true;
-            this.rbFour.Text = "IA";
-            this.rbFour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbFour.UseVisualStyleBackColor = false;
-            // 
-            // rbThree
-            // 
-            this.rbThree.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rbThree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.rbThree.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbThree.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
-            this.rbThree.FlatAppearance.BorderSize = 2;
-            this.rbThree.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.rbThree.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbThree.Location = new System.Drawing.Point(86, 33);
-            this.rbThree.Name = "rbThree";
-            this.rbThree.Size = new System.Drawing.Size(40, 40);
-            this.rbThree.TabIndex = 1;
-            this.rbThree.TabStop = true;
-            this.rbThree.Text = "2";
-            this.rbThree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rbThree.UseVisualStyleBackColor = false;
+            this.rbIA.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbIA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rbIA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbIA.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.rbIA.FlatAppearance.BorderSize = 2;
+            this.rbIA.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.rbIA.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbIA.Location = new System.Drawing.Point(142, 33);
+            this.rbIA.Name = "rbIA";
+            this.rbIA.Size = new System.Drawing.Size(40, 40);
+            this.rbIA.TabIndex = 2;
+            this.rbIA.TabStop = true;
+            this.rbIA.Tag = "3";
+            this.rbIA.Text = "IA";
+            this.rbIA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbIA.UseVisualStyleBackColor = false;
             // 
             // rbTwo
             // 
             this.rbTwo.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.rbTwo.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbTwo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbTwo.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
             this.rbTwo.FlatAppearance.BorderSize = 2;
             this.rbTwo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.rbTwo.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTwo.Location = new System.Drawing.Point(25, 33);
+            this.rbTwo.Location = new System.Drawing.Point(86, 33);
             this.rbTwo.Name = "rbTwo";
             this.rbTwo.Size = new System.Drawing.Size(40, 40);
-            this.rbTwo.TabIndex = 0;
+            this.rbTwo.TabIndex = 1;
             this.rbTwo.TabStop = true;
-            this.rbTwo.Text = "1";
+            this.rbTwo.Tag = "2";
+            this.rbTwo.Text = "2";
             this.rbTwo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rbTwo.UseVisualStyleBackColor = false;
+            // 
+            // rbOne
+            // 
+            this.rbOne.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rbOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rbOne.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbOne.Checked = true;
+            this.rbOne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbOne.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
+            this.rbOne.FlatAppearance.BorderSize = 2;
+            this.rbOne.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.rbOne.Font = new System.Drawing.Font("Lemon/Milk", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbOne.Location = new System.Drawing.Point(25, 33);
+            this.rbOne.Name = "rbOne";
+            this.rbOne.Size = new System.Drawing.Size(40, 40);
+            this.rbOne.TabIndex = 0;
+            this.rbOne.TabStop = true;
+            this.rbOne.Tag = "1";
+            this.rbOne.Text = "1";
+            this.rbOne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbOne.UseVisualStyleBackColor = false;
             // 
             // gbDifficulty
             // 
@@ -151,6 +155,7 @@
             this.rbEasy.Appearance = System.Windows.Forms.Appearance.Button;
             this.rbEasy.AutoSize = true;
             this.rbEasy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rbEasy.Checked = true;
             this.rbEasy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbEasy.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
             this.rbEasy.FlatAppearance.BorderSize = 2;
@@ -180,7 +185,7 @@
             this.rbMedium.Size = new System.Drawing.Size(84, 33);
             this.rbMedium.TabIndex = 2;
             this.rbMedium.TabStop = true;
-            this.rbMedium.Tag = "5";
+            this.rbMedium.Tag = "6";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = false;
             // 
@@ -199,7 +204,7 @@
             this.rbHard.Size = new System.Drawing.Size(64, 33);
             this.rbHard.TabIndex = 1;
             this.rbHard.TabStop = true;
-            this.rbHard.Tag = "6";
+            this.rbHard.Tag = "8";
             this.rbHard.Text = "Hard";
             this.rbHard.UseVisualStyleBackColor = false;
             // 
@@ -323,9 +328,9 @@
         private System.Windows.Forms.GroupBox gbPlayers;
         private System.Windows.Forms.GroupBox gbDifficulty;
         private System.Windows.Forms.ComboBox cbSubjects;
-        private System.Windows.Forms.RadioButton rbFour;
-        private System.Windows.Forms.RadioButton rbThree;
+        private System.Windows.Forms.RadioButton rbIA;
         private System.Windows.Forms.RadioButton rbTwo;
+        private System.Windows.Forms.RadioButton rbOne;
         private System.Windows.Forms.RadioButton rbEasy;
         private System.Windows.Forms.RadioButton rbMedium;
         private System.Windows.Forms.RadioButton rbHard;

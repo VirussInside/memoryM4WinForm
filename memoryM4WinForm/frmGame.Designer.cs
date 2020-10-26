@@ -30,12 +30,12 @@
         {
             this.panMemory = new System.Windows.Forms.Panel();
             this.btExit = new System.Windows.Forms.Button();
-            this.lbTimer = new System.Windows.Forms.Label();
             this.lbAttempts = new System.Windows.Forms.Label();
             this.lbScore = new System.Windows.Forms.Label();
             this.lbPlayer = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbTimer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panMemory
@@ -43,12 +43,12 @@
             this.panMemory.Location = new System.Drawing.Point(61, 56);
             this.panMemory.Name = "panMemory";
             this.panMemory.Padding = new System.Windows.Forms.Padding(10);
-            this.panMemory.Size = new System.Drawing.Size(660, 660);
+            this.panMemory.Size = new System.Drawing.Size(800, 749);
             this.panMemory.TabIndex = 0;
             // 
             // btExit
             // 
-            this.btExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btExit.BackColor = System.Drawing.Color.Indigo;
             this.btExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btExit.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
@@ -57,23 +57,13 @@
             this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExit.Font = new System.Drawing.Font("Lemon/Milk", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExit.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btExit.Location = new System.Drawing.Point(12, 732);
+            this.btExit.Location = new System.Drawing.Point(12, 825);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(172, 49);
             this.btExit.TabIndex = 2;
             this.btExit.Text = "Exit game";
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.Exit_Game);
-            // 
-            // lbTimer
-            // 
-            this.lbTimer.Font = new System.Drawing.Font("Lemon/Milk", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTimer.Location = new System.Drawing.Point(640, 9);
-            this.lbTimer.Name = "lbTimer";
-            this.lbTimer.Size = new System.Drawing.Size(81, 38);
-            this.lbTimer.TabIndex = 3;
-            this.lbTimer.Text = "9999";
-            this.lbTimer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbAttempts
             // 
@@ -99,7 +89,7 @@
             // 
             this.lbPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPlayer.Font = new System.Drawing.Font("Lemon/Milk", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPlayer.Location = new System.Drawing.Point(522, 741);
+            this.lbPlayer.Location = new System.Drawing.Point(677, 834);
             this.lbPlayer.Name = "lbPlayer";
             this.lbPlayer.Size = new System.Drawing.Size(250, 40);
             this.lbPlayer.TabIndex = 6;
@@ -129,19 +119,33 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // lbTimer
+            // 
+            this.lbTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTimer.Font = new System.Drawing.Font("Lemon/Milk", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimer.Location = new System.Drawing.Point(846, 9);
+            this.lbTimer.Name = "lbTimer";
+            this.lbTimer.Size = new System.Drawing.Size(81, 38);
+            this.lbTimer.TabIndex = 9;
+            this.lbTimer.Text = "9999";
+            this.lbTimer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 793);
+            this.ClientSize = new System.Drawing.Size(939, 886);
+            this.Controls.Add(this.lbTimer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbPlayer);
             this.Controls.Add(this.lbScore);
             this.Controls.Add(this.lbAttempts);
-            this.Controls.Add(this.lbTimer);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.panMemory);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(955, 925);
+            this.MinimizeBox = false;
             this.Name = "frmGame";
             this.Text = "frmGame";
             this.Load += new System.EventHandler(this.frmGame_Load);
@@ -154,11 +158,11 @@
 
         private System.Windows.Forms.Panel panMemory;
         private System.Windows.Forms.Button btExit;
-        private System.Windows.Forms.Label lbTimer;
         private System.Windows.Forms.Label lbAttempts;
         private System.Windows.Forms.Label lbScore;
         private System.Windows.Forms.Label lbPlayer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbTimer;
     }
 }

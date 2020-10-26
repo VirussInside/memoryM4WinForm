@@ -55,12 +55,21 @@ namespace memoryM4WinForm
             int imageCount = 0;
             int x = 0;
             int y = 0;
+            int cardSize = 100;
+            int spaceSize = 10;
+
             List<string> imageList = GenerateImageNames(SubjectChoice, cardCount);
 
             PictureBox pbImageGrid;
 
             if (cardCount > 0) {
                 gridSize = Convert.ToInt32(Math.Sqrt(cardCount));
+
+                if (cardCount > 36)
+                {
+                    cardSize = 90;
+                    spaceSize = 5;
+                }
 
                 for (int rowCount = 0; rowCount < gridSize; rowCount++)
                 {
@@ -69,7 +78,7 @@ namespace memoryM4WinForm
                         pbImageGrid = new PictureBox
                         {
                             Location = new System.Drawing.Point(x, y),
-                            Size = new System.Drawing.Size(100, 100),
+                            Size = new System.Drawing.Size(cardSize, cardSize),
                             SizeMode = PictureBoxSizeMode.StretchImage,
                             Image = (Image)Properties.Resources.ResourceManager.GetObject("memorize_back_card"), // Puts the back image
                             Name = imageList[imageCount], // Put the right name of the image
@@ -79,11 +88,11 @@ namespace memoryM4WinForm
                         pbImageGrid.BackColor = Color.Azure;
                         panMemory.Controls.Add(pbImageGrid);
 
-                        x += 110;
+                        x += (cardSize+ spaceSize);
                         imageCount++;
                     }
                     x = 0; // Reset position for the first image of the next row
-                    y += 110;
+                    y += cardSize+ spaceSize;
                 }
             }
         }

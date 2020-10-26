@@ -15,6 +15,7 @@ namespace memoryM4WinForm
         public frmScore()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         /// <summary>
