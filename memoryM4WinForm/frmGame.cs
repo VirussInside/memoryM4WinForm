@@ -15,12 +15,15 @@ namespace memoryM4WinForm
         private string chosenSubject;
         private int chosenDifficulty;
         private int cardsCount;
+        private int activePlayer = 0;
         private Settings gameSettings;
+        private List<Player> playersList;
 
-        public frmGame(Settings SettingsGame)
+        public frmGame(Settings SettingsGame, List<Player> players)
         {
             InitializeComponent();
-            
+            playersList = new List<Player>();
+            playersList = players;
             gameSettings = SettingsGame;
             chosenSubject = SettingsGame.Subject.ToLower();
             chosenDifficulty = SettingsGame.Difficulty;
@@ -56,7 +59,8 @@ namespace memoryM4WinForm
                 }
             }
 
-            if (allCardsFound)
+            // Checking if the game is over
+            if(allCardsFound)
             {
                 ShowScore();
             }
@@ -67,14 +71,37 @@ namespace memoryM4WinForm
         /// </summary>
         private void ShowScore()
         {
+            Player theWinner = GetCurrentPlayer();
             this.Hide();
-            var formScore = new frmScore();
+            var formScore = new frmScore(theWinner);
+            formScore.Show();
             formScore.Closed += (s, args) => this.Close();
             this.Dispose();
             GC.Collect();
-            formScore.Show();
         }
 
+        /// <summary>
+        /// Switching between first and second player if needed
+        /// </summary>
+        public void ChangePlayer() {
+            if (activePlayer == 0)
+                activePlayer = 1;
+            else
+                activePlayer = 0;
+        }
+
+        /// <summary>
+        /// Retrieves the current active player
+        /// </summary>
+        /// <returns>Active player</returns>
+        public Player GetCurrentPlayer() {
+
+            // Only one player
+            if (playersList.Count() == 1)
+                activePlayer = 0; // Stays the first player
+
+            return playersList[activePlayer];
+        }
 
         /// <summary>
         /// Updates the text labels for score, attempts and player's name
@@ -82,11 +109,11 @@ namespace memoryM4WinForm
         /// <param name="attempts">Attemps count</param>
         /// <param name="score">Score count</param>
         /// <param name="playerName">Player's name</param>
-        public void SetTextForLabel(int attempts, int score, string playerName)
+        public void SetTextForLabel(Player currentPlayer)
         {
-            lbAttempts.Text = attempts.ToString();
-            lbScore.Text = score.ToString();
-            lbPlayer.Text = playerName;
+            lbAttempts.Text = "Attempts " + currentPlayer.playerAttempts.ToString();
+            lbScore.Text = "Score : " + currentPlayer.playerScore.ToString();
+            lbPlayerName.Text = currentPlayer.playerName;
         }
 
         /// <summary>
@@ -109,9 +136,9 @@ namespace memoryM4WinForm
             CenterToScreen();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lbPlayerName_Click(object sender, EventArgs e)
         {
-
+            ShowScore();
         }
     }
 }

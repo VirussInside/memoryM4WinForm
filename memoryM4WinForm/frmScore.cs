@@ -12,9 +12,10 @@ namespace memoryM4WinForm
 {
     public partial class frmScore : Form
     {
-        public frmScore()
+        public frmScore(Player winner)
         {
             InitializeComponent();
+            SetLabels(winner);
             CenterToScreen();
         }
 
@@ -39,6 +40,15 @@ namespace memoryM4WinForm
                 GC.Collect();
                 Application.Exit();
             }
+        }
+
+        /// <summary>
+        /// Setting the labels text with the winning player's informations
+        /// </summary>
+        /// <param name="winPlayer">Winning player</param>
+        private void SetLabels(Player winPlayer) {
+            lbWinner.Text = winPlayer.playerName.ToString();
+            lbStats.Text = "found " + winPlayer.playerScore + " pairs in " + winPlayer.playerAttempts + " attempts.";
         }
 
 

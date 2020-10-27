@@ -31,6 +31,8 @@
             this.lbCongrats = new System.Windows.Forms.Label();
             this.btPlayAgain = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
+            this.lbStats = new System.Windows.Forms.Label();
+            this.lbWinner = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbCongrats
@@ -39,11 +41,12 @@
             this.lbCongrats.BackColor = System.Drawing.Color.Transparent;
             this.lbCongrats.Font = new System.Drawing.Font("Lemon/Milk", 55F, System.Drawing.FontStyle.Italic);
             this.lbCongrats.ForeColor = System.Drawing.Color.White;
-            this.lbCongrats.Location = new System.Drawing.Point(140, 152);
+            this.lbCongrats.Location = new System.Drawing.Point(162, 45);
             this.lbCongrats.Name = "lbCongrats";
             this.lbCongrats.Size = new System.Drawing.Size(515, 105);
             this.lbCongrats.TabIndex = 14;
             this.lbCongrats.Text = "Congrats ! ";
+            this.lbCongrats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btPlayAgain
             // 
@@ -83,12 +86,39 @@
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
+            // lbStats
+            // 
+            this.lbStats.BackColor = System.Drawing.Color.Transparent;
+            this.lbStats.Font = new System.Drawing.Font("Lemon/Milk", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStats.ForeColor = System.Drawing.Color.White;
+            this.lbStats.Location = new System.Drawing.Point(24, 251);
+            this.lbStats.MaximumSize = new System.Drawing.Size(750, 60);
+            this.lbStats.Name = "lbStats";
+            this.lbStats.Size = new System.Drawing.Size(750, 60);
+            this.lbStats.TabIndex = 17;
+            this.lbStats.Text = "Stats of attempts and score";
+            this.lbStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbWinner
+            // 
+            this.lbWinner.BackColor = System.Drawing.Color.Transparent;
+            this.lbWinner.Font = new System.Drawing.Font("Lemon/Milk", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWinner.ForeColor = System.Drawing.Color.White;
+            this.lbWinner.Location = new System.Drawing.Point(20, 183);
+            this.lbWinner.Name = "lbWinner";
+            this.lbWinner.Size = new System.Drawing.Size(768, 59);
+            this.lbWinner.TabIndex = 18;
+            this.lbWinner.Text = "Winner";
+            this.lbWinner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbWinner);
+            this.Controls.Add(this.lbStats);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btPlayAgain);
             this.Controls.Add(this.lbCongrats);
@@ -104,5 +134,7 @@
         private System.Windows.Forms.Label lbCongrats;
         private System.Windows.Forms.Button btPlayAgain;
         private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.Label lbStats;
+        private System.Windows.Forms.Label lbWinner;
     }
 }

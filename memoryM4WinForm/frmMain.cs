@@ -32,7 +32,7 @@ namespace memoryM4WinForm
             if (ValidateSettings())
             {
                 this.Hide();
-                var formGame = new frmGame(gameSettings);
+                var formGame = new frmGame(gameSettings, CreatePlayers(gameSettings.PlayerCount));
                 formGame.Closed += (s, args) => this.Close();
                 formGame.Show();
             }
@@ -99,6 +99,38 @@ namespace memoryM4WinForm
 
             return collectedSettings;
         }
+
+
+        /// <summary>
+        /// Creates the players with their informations
+        /// </summary>
+        private List<Player> CreatePlayers(int playerCount)
+        {
+            List<Player> playersList = new List<Player>();
+            switch (playerCount)
+            {
+                case 1:
+                    playersList.Add(new Player());
+                    playersList[0].playerName = "HAHAHA";
+                    break;
+                case 2:
+                    playersList.Add(new Player());
+                    playersList[0].playerName = "HEHHEE";
+                    playersList.Add(new Player());
+                    playersList[1].playerName = "HOHOHO";
+                    break;
+                case 3:
+                    playersList.Add(new Player());
+                    playersList[0].playerName = "HEHHEE";
+                    playersList.Add(new Player());
+                    playersList[1].playerName = "IA";
+                    break;
+                default:
+                    break;
+            }
+            return playersList;
+        }
+
 
         /// <summary>
         /// Managing the subjects selection events

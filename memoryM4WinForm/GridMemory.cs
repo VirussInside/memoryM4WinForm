@@ -29,6 +29,7 @@ namespace memoryM4WinForm
         private PictureBox pbClicked2;
 
         private int attemptsCount = 0;
+        private int pairsFound = 0;
         private int clickCount = 0;
         private frmGame frmGameInstance;
 
@@ -104,6 +105,9 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void ProcessClickedImage(object sender, MouseEventArgs e)
         {
+            Player currentPlayer = frmGameInstance.GetCurrentPlayer();
+            frmGameInstance.SetTextForLabel(currentPlayer);
+
             ShowCard((PictureBox)sender); // Turns the card around to show the image
             switch (clickCount)
             {
@@ -116,6 +120,8 @@ namespace memoryM4WinForm
                 case 1:
                     if (pbClicked1.Tag != ((PictureBox)sender).Tag)
                     {
+                        currentPlayer.playerAttempts++; // Count the attempt anyway
+
                         pbClicked2 = (PictureBox)sender;
                         if (CompareCards(pbClicked1.Name, pbClicked2.Name)) // Same images
                         {
@@ -123,28 +129,25 @@ namespace memoryM4WinForm
                             // Remove card from game and show label of attempts and points TODO ARTIOM
                             pbClicked1.Hide();
                             pbClicked2.Hide();
+                            currentPlayer.playerScore++;
                             frmGameInstance.CheckWin();
                         }
                         else // Different images so hide them again
                         {
-                            System.Threading.Thread.Sleep(1000); // wait for 2.5 seconds to let some time to remember the position of the card
+                            System.Threading.Thread.Sleep(1000); // wait for 2.5 seconds to let some time to remember the position of the cards
                             HideCards(pbClicked1, pbClicked2);
-                            // HOW TO BLOCK FOR ANOTHER CLICK DURING WAIT ? 
+                            frmGameInstance.ChangePlayer();
                         }
                         clickCount = 0;
-                        attemptsCount++;
                     }
                     break;
                 default:
                     break;
             }
 
-            frmGameInstance.SetTextForLabel(attemptsCount,attemptsCount,"Artiom");
+            // Refresh the labels with the new current player stats
+            frmGameInstance.SetTextForLabel(frmGameInstance.GetCurrentPlayer());
         }
-
-
-       
-
 
         /// <summary>
         /// Changes the regular back image to the right theme image
