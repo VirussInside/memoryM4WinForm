@@ -58,6 +58,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPlayerName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlayerName.Designer.cs">
+      <DependentUpon>frmPlayerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmScore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlayerName.resx">
+      <DependentUpon>frmPlayerName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScore.resx">
       <DependentUpon>frmScore.cs</DependentUpon>

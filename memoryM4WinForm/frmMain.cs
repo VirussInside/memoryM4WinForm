@@ -31,8 +31,8 @@ namespace memoryM4WinForm
             // Checking if all settings are correct
             if (ValidateSettings())
             {
-                this.Hide();
                 var formGame = new frmGame(gameSettings, CreatePlayers(gameSettings.PlayerCount));
+                this.Hide();
                 formGame.Closed += (s, args) => this.Close();
                 formGame.Show();
             }
@@ -40,7 +40,7 @@ namespace memoryM4WinForm
             {
                 MessageBox.Show("Some settings are missing !");
             }
-            
+
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace memoryM4WinForm
                 subject = cbSubjects.Text;
             }
 
-            Settings collectedSettings = new Settings(difficulty,playerCount,subject);
+            Settings collectedSettings = new Settings(difficulty, playerCount, subject);
 
             return collectedSettings;
         }
@@ -110,25 +110,40 @@ namespace memoryM4WinForm
             switch (playerCount)
             {
                 case 1:
-                    playersList.Add(new Player());
-                    playersList[0].playerName = "HAHAHA";
+                    playersList.Add(new Player(RequestPlayerName(1)));
                     break;
                 case 2:
-                    playersList.Add(new Player());
-                    playersList[0].playerName = "HEHHEE";
-                    playersList.Add(new Player());
-                    playersList[1].playerName = "HOHOHO";
+                    playersList.Add(new Player(RequestPlayerName(1)));
+                    playersList.Add(new Player(RequestPlayerName(2)));
                     break;
                 case 3:
-                    playersList.Add(new Player());
-                    playersList[0].playerName = "HEHHEE";
-                    playersList.Add(new Player());
-                    playersList[1].playerName = "IA";
+                    playersList.Add(new Player(RequestPlayerName(1)));
+                    playersList.Add(new Player("MemorizeIA"));
                     break;
                 default:
                     break;
             }
             return playersList;
+        }
+
+
+        /// <summary>
+        /// Askss the player to enter his name
+        /// </summary>
+        /// <returns>Player's entered name</returns>
+        private string RequestPlayerName(int playerNumber)
+        {
+            string PlayerName = "";
+
+            using (var formPlayerName = new frmPlayerName(playerNumber))
+            {
+                var result = formPlayerName.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    PlayerName = formPlayerName.EnteredName;            //values preserved after close
+                }
+            }
+            return PlayerName;
         }
 
 
