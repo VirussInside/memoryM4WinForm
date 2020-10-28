@@ -152,8 +152,7 @@ namespace memoryM4WinForm
                     break;
 
                 case "Food":
-                    //pbPreview.Image = Properties.Resources.food1;
-                    pbPreview.Hide();
+                    pbPreview.Image = Properties.Resources.food1;
                     break;
 
                 case "Nature":
