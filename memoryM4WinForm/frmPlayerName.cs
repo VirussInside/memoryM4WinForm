@@ -19,6 +19,7 @@ namespace memoryM4WinForm
         {
             InitializeComponent();
             lbPlayerName.Text = "Player " + playerNumber;
+            this.ActiveControl = tbName;
             CenterToScreen();
         }
 

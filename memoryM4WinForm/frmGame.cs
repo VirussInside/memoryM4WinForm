@@ -29,6 +29,7 @@ namespace memoryM4WinForm
             chosenDifficulty = SettingsGame.Difficulty;
             cardsCount = SettingsGame.CardsCount;
             SetGameWindowSize();
+            SetTextForLabel(GetCurrentPlayer());
         }
 
         /// <summary>

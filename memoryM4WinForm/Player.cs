@@ -9,7 +9,7 @@ namespace memoryM4WinForm
     public class Player
     {
 
-        public Player(string name = "MemoPlayer") {
+        public Player(string name = "Player") {
             playerName = name;
         }
 

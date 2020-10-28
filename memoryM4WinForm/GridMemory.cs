@@ -192,7 +192,7 @@ namespace memoryM4WinForm
         {
             // Create a list with all image names available
             List<string> allNames = new List<string>();
-            for (int i = 0; i <= HIGHEST_DIFFICULTY*HIGHEST_DIFFICULTY/2; i++) 
+            for (int i = 1; i <= HIGHEST_DIFFICULTY*HIGHEST_DIFFICULTY/2; i++) 
             {
                 allNames.Add(chosenSubject.ToLower() + i);
                 
@@ -201,9 +201,9 @@ namespace memoryM4WinForm
 
             // Pick the right amount of card names from all the available names
             List<string> names = new List<string>(); 
-            for (int i = 1; i <= cardCount/2; i++)
+            for (int j = 0; j < cardCount/2; j++)
             {
-                names.Add(allNames[i]);
+                names.Add(allNames[j]);
             }
             
             // Duplicate values of the list to have the same name twice for the pairs
