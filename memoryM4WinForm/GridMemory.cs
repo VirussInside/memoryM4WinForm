@@ -24,12 +24,10 @@ namespace memoryM4WinForm
     {
         
         private const string CARD_BACK_NAME = "memorize_back_card"; // Name of the image resource for the cards back
-
+        private const int HIGHEST_DIFFICULTY = 8;
         private PictureBox pbClicked1;
         private PictureBox pbClicked2;
 
-        private int attemptsCount = 0;
-        private int pairsFound = 0;
         private int clickCount = 0;
         private frmGame frmGameInstance;
 
@@ -185,22 +183,33 @@ namespace memoryM4WinForm
 
 
         /// <summary>
-        /// Create the list of image names with a duplicate of each
+        /// Create the list of names with a duplicate of each to form the pairs
         /// </summary>
         /// <param name="chosenSubject">Name of the chosen subject</param>
+        /// <param name="cardCount">Number of different cards to generate</param>
         /// <returns>List of unsorted imagenames with the same name twice</returns>
         private List<string> GenerateImageNames(String chosenSubject, int cardCount)
         {
-            List<string> names = new List<string>();
+            // Create a list with all image names available
+            List<string> allNames = new List<string>();
+            for (int i = 0; i <= HIGHEST_DIFFICULTY*HIGHEST_DIFFICULTY/2; i++) 
+            {
+                allNames.Add(chosenSubject.ToLower() + i);
+                
+            }
+            allNames = ShuffleImages(allNames); // Randomize the names to never pick the images in the same order
+
+            // Pick the right amount of card names from all the available names
+            List<string> names = new List<string>(); 
             for (int i = 1; i <= cardCount/2; i++)
             {
-                names.Add(chosenSubject.ToLower() + i);
+                names.Add(allNames[i]);
             }
             
-            // Duplicate values of the list to have the same name twice
+            // Duplicate values of the list to have the same name twice for the pairs
             names = names.SelectMany(t => Enumerable.Repeat(t, 2)).ToList();
 
-            return ShuffleImages(names); // Shuffle images before returning the list
+            return ShuffleImages(names); // Shuffle images before returning the list to randomise the duplicates
         }
 
         /// <summary>
