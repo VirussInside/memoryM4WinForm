@@ -28,7 +28,7 @@ namespace memoryM4WinForm
             chosenSubject = SettingsGame.Subject.ToLower();
             chosenDifficulty = SettingsGame.Difficulty;
             cardsCount = SettingsGame.CardsCount;
-            SetGameWindowSize(cardsCount);
+            SetGameWindowSize();
         }
 
         /// <summary>
@@ -129,9 +129,10 @@ namespace memoryM4WinForm
         /// <summary>
         /// Sets the size of the game window so it fits right regarding the difficulty
         /// </summary>
-        private void SetGameWindowSize(int gameCardsCount) {
+        private void SetGameWindowSize() {
 
-            int gameSize = chosenDifficulty*100+200;
+            // Calculate the needed size for the width and height of the window
+            int gameSize = chosenDifficulty*100+220;
             Size = new Size(gameSize, gameSize);
             CenterToScreen();
         }

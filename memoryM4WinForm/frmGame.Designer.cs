@@ -38,7 +38,7 @@
             // 
             // panMemory
             // 
-            this.panMemory.Location = new System.Drawing.Point(30, 50);
+            this.panMemory.Location = new System.Drawing.Point(30, 62);
             this.panMemory.Name = "panMemory";
             this.panMemory.Padding = new System.Windows.Forms.Padding(10);
             this.panMemory.Size = new System.Drawing.Size(800, 749);
