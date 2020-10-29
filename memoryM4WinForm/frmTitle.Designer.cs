@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTitle));
             this.pbMemorizeTitle = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbMemorizeTitle)).BeginInit();
             this.SuspendLayout();
@@ -55,10 +56,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 611);
             this.Controls.Add(this.pbMemorizeTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(650, 650);
             this.MinimumSize = new System.Drawing.Size(650, 650);
             this.Name = "frmTitle";
-            this.Text = "frmTitle";
+            this.Text = "Memorize";
             ((System.ComponentModel.ISupportInitialize)(this.pbMemorizeTitle)).EndInit();
             this.ResumeLayout(false);
 

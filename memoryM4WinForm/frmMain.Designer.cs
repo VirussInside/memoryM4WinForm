@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btPlay = new System.Windows.Forms.Button();
             this.gbPlayers = new System.Windows.Forms.GroupBox();
             this.rbIA = new System.Windows.Forms.RadioButton();
@@ -310,6 +311,7 @@
             this.Controls.Add(this.panGame);
             this.Font = new System.Drawing.Font("Eras Demi ITC", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(650, 650);
             this.Name = "frmMain";
             this.Text = "Memorize";

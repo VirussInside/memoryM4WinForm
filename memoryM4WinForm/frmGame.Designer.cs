@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGame));
             this.panMemory = new System.Windows.Forms.Panel();
             this.btExit = new System.Windows.Forms.Button();
             this.lbAttempts = new System.Windows.Forms.Label();
@@ -119,11 +120,12 @@
             this.Controls.Add(this.lbAttempts);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.panMemory);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(955, 925);
             this.MinimizeBox = false;
             this.Name = "frmGame";
-            this.Text = "frmGame";
+            this.Text = "Memorize";
             this.Load += new System.EventHandler(this.frmGame_Load);
             this.ResumeLayout(false);
 

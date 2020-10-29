@@ -33,8 +33,8 @@ namespace memoryM4WinForm
         enum DifficultyLevel
         {
             EASY = 4,
-            MEDIUM,
-            HARD
+            MEDIUM = 6,
+            HARD = 8
         }
 
         /// <summary>

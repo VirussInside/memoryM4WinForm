@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScore));
             this.lbCongrats = new System.Windows.Forms.Label();
             this.btPlayAgain = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
@@ -122,8 +123,9 @@
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btPlayAgain);
             this.Controls.Add(this.lbCongrats);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmScore";
-            this.Text = "frmScore";
+            this.Text = "Memorize";
             this.ResumeLayout(false);
             this.PerformLayout();
 
