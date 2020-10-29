@@ -118,7 +118,7 @@ namespace memoryM4WinForm
                     break;
                 case 3:
                     playersList.Add(new Player(RequestPlayerName(1)));
-                    playersList.Add(new Player("MemorizeIA"));
+                    playersList.Add(new PlayerIA("IA"));
                     break;
                 default:
                     break;

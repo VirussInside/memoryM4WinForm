@@ -12,13 +12,20 @@ namespace memoryM4WinForm
 {
     public partial class frmGame : Form
     {
-        private string chosenSubject;
-        private int chosenDifficulty;
-        private int cardsCount;
-        private int activePlayer = 0;
-        private Settings gameSettings;
-        private List<Player> playersList;
 
+        private string chosenSubject;       // Subject for the cards
+        private int chosenDifficulty;       // Difficulty rate
+        private int cardsCount;             // Number of card in total
+        private int activePlayer = 0;       // Sets the active player
+        private Settings gameSettings;      // All settings of the game
+        private List<Player> playersList;   // All players for the game
+
+
+        /// <summary>
+        /// Constructor of the game form
+        /// </summary>
+        /// <param name="SettingsGame">Settings of the game</param>
+        /// <param name="players">Players list</param>
         public frmGame(Settings SettingsGame, List<Player> players)
         {
             InitializeComponent();
@@ -49,7 +56,7 @@ namespace memoryM4WinForm
         /// </summary>
         /// <param name="panelImages">Panel that contains all the pictureboxes</param>
         /// <returns>Boolean value for win or not</returns>
-        public void CheckWin()
+        public bool CheckWin()
         {
             Boolean allCardsFound = true;
             foreach (PictureBox pbImage in panMemory.Controls)
@@ -59,18 +66,13 @@ namespace memoryM4WinForm
                     allCardsFound = false;
                 }
             }
-
-            // Checking if the game is over
-            if(allCardsFound)
-            {
-                ShowScore();
-            }
+            return allCardsFound;
         }
 
         /// <summary>
         /// Open score form 
         /// </summary>
-        private void ShowScore()
+        public void ShowScore()
         {
             Player theWinner = GetCurrentPlayer();
             this.Hide();
@@ -82,11 +84,11 @@ namespace memoryM4WinForm
         }
 
         /// <summary>
-        /// Switching between first and second player if needed
+        /// Switching between players
         /// </summary>
         public void ChangePlayer() {
-            if (activePlayer == 0)
-                activePlayer = 1;
+            if (activePlayer < playersList.Count()-1)
+                activePlayer++;
             else
                 activePlayer = 0;
         }
@@ -138,6 +140,8 @@ namespace memoryM4WinForm
             CenterToScreen();
         }
 
+
+        // Test the winning form without having to finish the memory by clicking on the playername
         private void lbPlayerName_Click(object sender, EventArgs e)
         {
             ShowScore();

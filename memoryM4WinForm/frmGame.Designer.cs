@@ -130,12 +130,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panMemory;
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label lbAttempts;
         private System.Windows.Forms.Label lbScore;
         private System.Windows.Forms.Label lbPlayerName;
         private System.Windows.Forms.Label lbTimer;
+        public System.Windows.Forms.Panel panMemory;
     }
 }

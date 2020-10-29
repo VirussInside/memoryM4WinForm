@@ -29,7 +29,11 @@ namespace memoryM4WinForm
         private PictureBox pbClicked2;
 
         private int clickCount = 0;
+        private int gridCardsCount = 0;
+        private bool ComputerPlays = false;
         private frmGame frmGameInstance;
+        private PlayerIA testPlayer;
+        private Player currentPlayer;
 
 
         /// <summary>
@@ -56,6 +60,8 @@ namespace memoryM4WinForm
             int y = 0;
             int cardSize = 100;
             int spaceSize = 10;
+
+            gridCardsCount = cardCount;
 
             List<string> imageList = GenerateImageNames(SubjectChoice, cardCount);
 
@@ -103,8 +109,47 @@ namespace memoryM4WinForm
         /// <param name="e"></param>
         private void ProcessClickedImage(object sender, MouseEventArgs e)
         {
-            Player currentPlayer = frmGameInstance.GetCurrentPlayer();
-            frmGameInstance.SetTextForLabel(currentPlayer);
+            if (ComputerPlays)
+            {
+                ComputerClick();
+            }
+            else
+            {
+                ClickImage(sender);
+            }
+        }
+
+        /// <summary>
+        /// Internal process for the computer click
+        /// </summary>
+        private void ComputerClick() {
+            testPlayer = frmGameInstance.GetCurrentPlayer() as PlayerIA;
+            List<int> computerChoices = testPlayer.PlaySelf(GetVisibleCards());
+            foreach (int tag in computerChoices)
+            {
+                foreach (Control c in frmGameInstance.panMemory.Controls)
+                {
+                    if (c.Tag.ToString() == tag.ToString())
+                    {
+                        ClickImage(c);
+                        System.Threading.Thread.Sleep(500);
+                    }
+                }
+            }       
+        }
+
+
+       
+        /// <summary>
+        /// Management of the clicks on the pictureboxes
+        /// </summary>
+        /// <param name="sender">Clicked picturebox</param>
+        private void ClickImage(object sender) {
+
+            currentPlayer = frmGameInstance.GetCurrentPlayer();
+            
+            // Refresh the labels with the new current player stats
+            frmGameInstance.SetTextForLabel(frmGameInstance.GetCurrentPlayer());
 
             ShowCard((PictureBox)sender); // Turns the card around to show the image
             switch (clickCount)
@@ -116,27 +161,46 @@ namespace memoryM4WinForm
                     break;
                 // Second image clicked
                 case 1:
+                    // Do not allow click on the same picturebox by checking the tags
                     if (pbClicked1.Tag != ((PictureBox)sender).Tag)
                     {
                         currentPlayer.playerAttempts++; // Count the attempt anyway
-
+                        clickCount = 0;
                         pbClicked2 = (PictureBox)sender;
+
                         if (CompareCards(pbClicked1.Name, pbClicked2.Name)) // Same images
                         {
                             System.Threading.Thread.Sleep(750);
-                            // Remove card from game and show label of attempts and points TODO ARTIOM
                             pbClicked1.Hide();
                             pbClicked2.Hide();
                             currentPlayer.playerScore++;
-                            frmGameInstance.CheckWin();
+
+                            if (!frmGameInstance.CheckWin())
+                            {
+                                // Initiate the click again if the computer found a pair
+                                if (ComputerPlays) ProcessClickedImage(null, null);
+                            }
+                            else
+                            {
+                                frmGameInstance.ShowScore();
+                            }
                         }
                         else // Different images so hide them again
                         {
-                            System.Threading.Thread.Sleep(1000); // wait for 2.5 seconds to let some time to remember the position of the cards
+                            System.Threading.Thread.Sleep(1000); // Let the cards visible for a moment to remember the image
                             HideCards(pbClicked1, pbClicked2);
                             frmGameInstance.ChangePlayer();
+                            if (frmGameInstance.GetCurrentPlayer() is PlayerIA) 
+                            {
+                                ComputerPlays = true;
+                                ProcessClickedImage(null, null);
+                            }
+                            else
+                            {
+                                ComputerPlays = false;
+                            }
                         }
-                        clickCount = 0;
+                        
                     }
                     break;
                 default:
@@ -146,6 +210,32 @@ namespace memoryM4WinForm
             // Refresh the labels with the new current player stats
             frmGameInstance.SetTextForLabel(frmGameInstance.GetCurrentPlayer());
         }
+
+
+
+
+
+        /// <summary>
+        /// Get the tags of all visible pictureboxes
+        /// </summary>
+        /// <returns>List of tags</returns>
+        private List<int> GetVisibleCards()
+        {
+            List<int> visibleCards = new List<int>();
+
+            foreach (Control c in frmGameInstance.panMemory.Controls)
+            {
+                if (c.Visible)
+                {
+                    visibleCards.Add(int.Parse(c.Tag.ToString()));
+                    Console.Write(c.Tag.ToString());
+                }
+            }
+            Console.WriteLine();
+            return visibleCards;
+        }
+
+
 
         /// <summary>
         /// Changes the regular back image to the right theme image
