@@ -18,5 +18,6 @@ namespace memoryM4WinForm
         public int playerNumber { get; set; }
         public int playerAttempts { get; set; }
 
+
     }
 }
