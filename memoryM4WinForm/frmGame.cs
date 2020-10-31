@@ -140,8 +140,8 @@ namespace memoryM4WinForm
                 {
                     highestScore = player.playerScore;
                     gameWinner = player;
-                    scoreList.Add(player.playerScore);
                 }
+                scoreList.Add(player.playerScore); // Add each score to the list 
             }
 
             // Checking if all the scores are the same in case of a tie game

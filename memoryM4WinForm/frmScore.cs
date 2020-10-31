@@ -92,5 +92,12 @@ namespace memoryM4WinForm
             formMain.Closed += (s, args) => this.Close();
             formMain.Show();
         }
+
+        private void frmScore_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+            GC.Collect();
+            Application.Exit();
+        }
     }
 }

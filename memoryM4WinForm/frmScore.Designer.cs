@@ -141,6 +141,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmScore";
             this.Text = "Memorize";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmScore_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
