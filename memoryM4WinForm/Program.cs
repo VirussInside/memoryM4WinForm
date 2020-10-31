@@ -1,4 +1,15 @@
-﻿using System;
+﻿/***********************************************************************************************************************************
+ *  
+ *  M4 - DIVTEC - INFEE3 
+ *  Author  :   Artiom Vallat
+ *  Date    :   30.10.2020
+ * 
+ *  Description : 
+ *      Main program class only used to open the first form of the game
+ * 
+ * 
+ **********************************************************************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

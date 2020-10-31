@@ -1,7 +1,20 @@
-﻿using System;
+﻿/***********************************************************************************************************************************
+ *  MEMORIZE
+ *  M4 - DIVTEC - INFEE3 
+ *  Author  :   Artiom Vallat
+ *  Date    :   30.10.2020
+ * 
+ *  Description : 
+ *      Gaming class that will contain the grid of cards and functions of the game in general like verifying if someone won
+ *      or changing players or retrieving their informations. Also contains the labels for the score and attempts.
+ * 
+ * 
+ **********************************************************************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,8 +32,9 @@ namespace memoryM4WinForm
         private int activePlayer = 0;       // Sets the active player
         private Settings gameSettings;      // All settings of the game
         private List<Player> playersList;   // All players for the game
-
-
+        private Timer gameTimer;            // Timer for the game in seconds
+        private Stopwatch stopWatch;        // Stopwatch for the timer
+        
         /// <summary>
         /// Constructor of the game form
         /// </summary>
@@ -36,7 +50,29 @@ namespace memoryM4WinForm
             chosenDifficulty = SettingsGame.Difficulty;
             cardsCount = SettingsGame.CardsCount;
             SetGameWindowSize();
+
+
+            // Timer processing
+            gameTimer = new Timer();
+            gameTimer.Interval = (1000);
+            gameTimer.Tick += new EventHandler(TimerTick);
+            stopWatch = new Stopwatch();
+            gameTimer.Start();
+            stopWatch.Start();
+
             SetTextForLabel(GetCurrentPlayer());
+        }
+
+
+        /// <summary>
+        /// Processing the ticks of the timer to show seconds
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TimerTick(object sender, EventArgs e)
+        {
+            lbTimer.Text = stopWatch.Elapsed.Seconds.ToString(); // Elapsed seconds displayed on the label
+            Application.DoEvents();
         }
 
         /// <summary>
@@ -56,7 +92,7 @@ namespace memoryM4WinForm
         /// </summary>
         /// <param name="panelImages">Panel that contains all the pictureboxes</param>
         /// <returns>Boolean value for win or not</returns>
-        public bool CheckWin()
+        public bool CheckGameFinished()
         {
             Boolean allCardsFound = true;
             foreach (PictureBox pbImage in panMemory.Controls)
@@ -70,17 +106,53 @@ namespace memoryM4WinForm
         }
 
         /// <summary>
-        /// Open score form 
+        /// Open score form with winning player stats and time
         /// </summary>
         public void ShowScore()
         {
-            Player theWinner = GetCurrentPlayer();
+            // Stop the timer when the game is finished
+            gameTimer.Stop();
+            stopWatch.Stop();
+            string winningTime = stopWatch.Elapsed.Seconds.ToString();
+
             this.Hide();
-            var formScore = new frmScore(theWinner);
+            var formScore = new frmScore(GetWinner(), winningTime); 
             formScore.Show();
             formScore.Closed += (s, args) => this.Close();
             this.Dispose();
             GC.Collect();
+        }
+
+
+        /// <summary>
+        /// Find the player with the highest score
+        /// </summary>
+        /// <returns>The game winning player or special tie player</returns>
+        private Player GetWinner() {
+            Player gameWinner = new Player();
+            List<int> scoreList = new List<int>();
+            int highestScore = 0;
+          
+            // Find the player with the highest score
+            foreach (Player player in playersList)
+            {
+                if (player.playerScore > highestScore)
+                {
+                    highestScore = player.playerScore;
+                    gameWinner = player;
+                    scoreList.Add(player.playerScore);
+                }
+            }
+
+            // Checking if all the scores are the same in case of a tie game
+            if (scoreList.Distinct().Count() == 1)
+            {
+                gameWinner = new Player("It's a tie !");
+                gameWinner.playerScore = highestScore;
+                gameWinner.playerTie = true;
+            }
+
+            return gameWinner;
         }
 
         /// <summary>
@@ -142,6 +214,7 @@ namespace memoryM4WinForm
 
 
         // Test the winning form without having to finish the memory by clicking on the playername
+        // For testing purposes of the game winning form without having to actually win the game to save time
         private void lbPlayerName_Click(object sender, EventArgs e)
         {
             ShowScore();

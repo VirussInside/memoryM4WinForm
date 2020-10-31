@@ -1,4 +1,16 @@
-﻿using System;
+﻿/***********************************************************************************************************************************
+ *  MEMORIZE
+ *  M4 - DIVTEC - INFEE3 
+ *  Author  :   Artiom Vallat
+ *  Date    :   30.10.2020
+ * 
+ *  Description : 
+ *      Class of player name input form.
+ *      Allows each player to enter their name after some basic validation. (lenght, enter key)
+ * 
+ * 
+ **********************************************************************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +35,9 @@ namespace memoryM4WinForm
             CenterToScreen();
         }
 
+        // Autopropriety for the entered name
+        public string EnteredName { get; set; }
+
         /// <summary>
         /// Confirm the input of the name
         /// </summary>
@@ -32,10 +47,6 @@ namespace memoryM4WinForm
         {
             ValidateName();
         }
-
-        // Autopropriety for the entered name
-        public string EnteredName { get; set; }
-
 
         /// <summary>
         /// Validating the entered name

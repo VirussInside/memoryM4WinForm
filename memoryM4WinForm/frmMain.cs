@@ -1,4 +1,17 @@
-﻿using System;
+﻿/***********************************************************************************************************************************
+ *  MEMORIZE
+ *  M4 - DIVTEC - INFEE3 
+ *  Author  :   Artiom Vallat
+ *  Date    :   30.10.2020
+ * 
+ *  Description : 
+ *      Class of the main menu of the game that contains the settings like player count, difficulty and subject. 
+ *      Also handles the players generation and some settings validation.
+ * 
+ * 
+ **********************************************************************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -150,12 +163,13 @@ namespace memoryM4WinForm
         /// <summary>
         /// Managing the subjects selection events
         /// </summary>
-        /// <param name="sender"></param>
+        /// <param name="sender">Combobox of subjects</param>
         /// <param name="e"></param>
         private void cbSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
             pbPreview.Show();
 
+            // Showing a preview of the selected subject
             switch (cbSubjects.SelectedItem.ToString())
             {
                 case "Car":

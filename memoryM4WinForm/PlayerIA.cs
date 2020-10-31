@@ -1,4 +1,16 @@
-﻿using System;
+﻿/***********************************************************************************************************************************
+ *  MEMORIZE
+ *  M4 - DIVTEC - INFEE3 
+ *  Author  :   Artiom Vallat
+ *  Date    :   30.10.2020
+ * 
+ *  Description : 
+ *      Class of computer (IA) player, contains the specific way to choose the cards 
+ * 
+ * 
+ **********************************************************************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +20,8 @@ namespace memoryM4WinForm
 {
     class PlayerIA : Player
     {
-
-
+        // Random generator for simple random computer choices
         public Random randomGen = new Random();
-        
 
         /// <summary>
         ///  Constructor of an IA player
@@ -30,12 +40,6 @@ namespace memoryM4WinForm
         public List<int> PlaySelf(List<int> availableTags) {
             List<int> cardsTagList = new List<int>();
             int indexTag;
-
-
-
-            if (availableTags.Count() == 2) {
-                Console.WriteLine("Plus que 2");
-            }
 
             do
             {

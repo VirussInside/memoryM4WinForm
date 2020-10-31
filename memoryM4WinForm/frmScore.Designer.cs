@@ -34,6 +34,7 @@
             this.btExit = new System.Windows.Forms.Button();
             this.lbStats = new System.Windows.Forms.Label();
             this.lbWinner = new System.Windows.Forms.Label();
+            this.lbGameTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbCongrats
@@ -92,7 +93,7 @@
             this.lbStats.BackColor = System.Drawing.Color.Transparent;
             this.lbStats.Font = new System.Drawing.Font("Lemon/Milk", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStats.ForeColor = System.Drawing.Color.White;
-            this.lbStats.Location = new System.Drawing.Point(24, 251);
+            this.lbStats.Location = new System.Drawing.Point(24, 232);
             this.lbStats.MaximumSize = new System.Drawing.Size(750, 60);
             this.lbStats.Name = "lbStats";
             this.lbStats.Size = new System.Drawing.Size(750, 60);
@@ -105,12 +106,25 @@
             this.lbWinner.BackColor = System.Drawing.Color.Transparent;
             this.lbWinner.Font = new System.Drawing.Font("Lemon/Milk", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWinner.ForeColor = System.Drawing.Color.White;
-            this.lbWinner.Location = new System.Drawing.Point(20, 183);
+            this.lbWinner.Location = new System.Drawing.Point(20, 173);
             this.lbWinner.Name = "lbWinner";
             this.lbWinner.Size = new System.Drawing.Size(768, 59);
             this.lbWinner.TabIndex = 18;
             this.lbWinner.Text = "Winner";
             this.lbWinner.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbGameTime
+            // 
+            this.lbGameTime.BackColor = System.Drawing.Color.Transparent;
+            this.lbGameTime.Font = new System.Drawing.Font("Lemon/Milk", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGameTime.ForeColor = System.Drawing.Color.White;
+            this.lbGameTime.Location = new System.Drawing.Point(24, 292);
+            this.lbGameTime.MaximumSize = new System.Drawing.Size(750, 60);
+            this.lbGameTime.Name = "lbGameTime";
+            this.lbGameTime.Size = new System.Drawing.Size(750, 60);
+            this.lbGameTime.TabIndex = 19;
+            this.lbGameTime.Text = "timer";
+            this.lbGameTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmScore
             // 
@@ -118,6 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbGameTime);
             this.Controls.Add(this.lbWinner);
             this.Controls.Add(this.lbStats);
             this.Controls.Add(this.btExit);
@@ -138,5 +153,6 @@
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Label lbStats;
         private System.Windows.Forms.Label lbWinner;
+        private System.Windows.Forms.Label lbGameTime;
     }
 }

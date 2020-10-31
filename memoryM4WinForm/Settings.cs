@@ -1,4 +1,16 @@
-﻿using System;
+﻿/***********************************************************************************************************************************
+ *  MEMORIZE
+ *  M4 - DIVTEC - INFEE3 
+ *  Author  :   Artiom Vallat
+ *  Date    :   30.10.2020
+ * 
+ *  Description : 
+ *      Class for the settings selected during a the game (player count, diffuclty, subjects)
+ * 
+ * 
+ **********************************************************************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +22,14 @@ namespace memoryM4WinForm
     {
 
         // Settings fields
-        private int myDifficulty;
-        private int myPlayerCount;
-        private int myCardsCount;
-        private string mySubject;
+        private int myDifficulty;   // Difficulty level
+        private int myPlayerCount;  // Number of players during the game
+        private int myCardsCount;   // Total of cards in the game
+        private string mySubject;   // Subject for the images
 
 
         /// <summary>
-        /// Settings constructor
+        /// Settings constructor with default values (Easiest diffuclty, one player and nature subject)
         /// </summary>
         public Settings(int Difficulty = 4, int PlayerCount = 1, string Subject = "nature")
         {
@@ -71,15 +83,5 @@ namespace memoryM4WinForm
             get => myPlayerCount;
             set => myPlayerCount = value;
         }
-
-
-
-
-
-
-
-
-
-
     }
 }

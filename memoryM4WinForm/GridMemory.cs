@@ -2,10 +2,11 @@
  *  
  *  M4 - DIVTEC - INFEE3 
  *  Author  :   Artiom Vallat
- *  Date    :   01.10.2020
+ *  Date    :   30.10.2020
  * 
  *  Description : 
- *      This class handles all the process from generating imagenames to loading the grid with images
+ *      This class handles all the process from generating imagenames to loading the grid with images and all
+ *      the interactions that the players can make with the cards.
  * 
  * 
  **********************************************************************************************************************************/
@@ -22,19 +23,20 @@ namespace memoryM4WinForm
 {
     public class GridMemory
     {
-        
+        private const int HIGHEST_DIFFICULTY = 8;   // Constant for the highest difficulty value (useful for generating the right amount of cards)
+
+        private int clickCount = 0;             // Click counter to know if 2 cards were clicked
+        private int gridCardsCount = 0;         // Counter of all teh cards
+        private bool ComputerPlays = false;     // Defines if it's the computer turn to play
+
+        private PictureBox pbClicked1;          // Store the first clicked Picturebox
+        private PictureBox pbClicked2;          // Store the second clicked Picturebox
+        private frmGame frmGameInstance;        // Main game form to store an instance of the actual game
+        private PlayerIA computerPlayer;        // Computer player to store an instance of the IA      
+        private Player currentPlayer;           // Store the player that is actually playing
+
+
         private const string CARD_BACK_NAME = "memorize_back_card"; // Name of the image resource for the cards back
-        private const int HIGHEST_DIFFICULTY = 8;
-        private PictureBox pbClicked1;
-        private PictureBox pbClicked2;
-
-        private int clickCount = 0;
-        private int gridCardsCount = 0;
-        private bool ComputerPlays = false;
-        private frmGame frmGameInstance;
-        private PlayerIA testPlayer;
-        private Player currentPlayer;
-
 
         /// <summary>
         /// Constructor of GridMemory
@@ -70,12 +72,14 @@ namespace memoryM4WinForm
             if (cardCount > 0) {
                 gridSize = Convert.ToInt32(Math.Sqrt(cardCount));
 
+                // Adapt the size of the cards to fit in the game form properly
                 if (cardCount > 36)
                 {
                     cardSize = 90;
                     spaceSize = 5;
                 }
 
+                // Creating all pictureboxes with their properties
                 for (int rowCount = 0; rowCount < gridSize; rowCount++)
                 {
                     for (int colCount = 0; colCount < gridSize; colCount++)
@@ -123,8 +127,8 @@ namespace memoryM4WinForm
         /// Internal process for the computer click
         /// </summary>
         private void ComputerClick() {
-            testPlayer = frmGameInstance.GetCurrentPlayer() as PlayerIA;
-            List<int> computerChoices = testPlayer.PlaySelf(GetVisibleCards());
+            computerPlayer = frmGameInstance.GetCurrentPlayer() as PlayerIA;
+            List<int> computerChoices = computerPlayer.PlaySelf(GetVisibleCards());
             foreach (int tag in computerChoices)
             {
                 foreach (Control c in frmGameInstance.panMemory.Controls)
@@ -175,7 +179,7 @@ namespace memoryM4WinForm
                             pbClicked2.Hide();
                             currentPlayer.playerScore++;
 
-                            if (!frmGameInstance.CheckWin())
+                            if (!frmGameInstance.CheckGameFinished())
                             {
                                 // Initiate the click again if the computer found a pair
                                 if (ComputerPlays) ProcessClickedImage(null, null);

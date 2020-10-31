@@ -1,4 +1,17 @@
-﻿using System;
+﻿/***********************************************************************************************************************************
+ *  MEMORIZE
+ *  M4 - DIVTEC - INFEE3 
+ *  Author  :   Artiom Vallat
+ *  Date    :   30.10.2020
+ * 
+ *  Description : 
+ *      Class of the score form that will display the player who won and all oh his stats like score, attempts and time.
+ *      Also gives the ability to play another game or quit the game.
+ * 
+ * 
+ **********************************************************************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +25,15 @@ namespace memoryM4WinForm
 {
     public partial class frmScore : Form
     {
-        public frmScore(Player winner)
+        /// <summary>
+        /// Constructor of the score form
+        /// </summary>
+        /// <param name="winner">Player that won the game</param>
+        /// <param name="gameTimer">Time to win</param>
+        public frmScore(Player winner, String gameTimer)
         {
             InitializeComponent();
-            SetLabels(winner);
+            SetLabels(winner, gameTimer);
             CenterToScreen();
         }
 
@@ -27,7 +45,7 @@ namespace memoryM4WinForm
         private void btExit_Click(object sender, EventArgs e)
         {
             string caption = "Memorize";
-            string message = "Would you like to leave the game ? 🤷‍♀️";
+            string message = "Would you like to leave the game ?";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
 
@@ -46,9 +64,18 @@ namespace memoryM4WinForm
         /// Setting the labels text with the winning player's informations
         /// </summary>
         /// <param name="winPlayer">Winning player</param>
-        private void SetLabels(Player winPlayer) {
+        private void SetLabels(Player winPlayer, String gameTimer) {
             lbWinner.Text = winPlayer.playerName.ToString();
-            lbStats.Text = "found " + winPlayer.playerScore + " pairs in " + winPlayer.playerAttempts + " attempts.";
+            if (winPlayer.playerTie)
+            {
+                lbStats.Text = "Everyone has " + winPlayer.playerScore + " pairs";
+            }
+            else
+            {
+                lbStats.Text = "found " + winPlayer.playerScore + " pairs in " + winPlayer.playerAttempts + " attempts";
+            }
+            
+            lbGameTime.Text = "after " + gameTimer + " seconds";
         }
 
 

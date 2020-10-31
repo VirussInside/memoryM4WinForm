@@ -102,9 +102,9 @@
             // 
             this.lbTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTimer.Font = new System.Drawing.Font("Lemon/Milk", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTimer.Location = new System.Drawing.Point(846, 9);
+            this.lbTimer.Location = new System.Drawing.Point(826, 9);
             this.lbTimer.Name = "lbTimer";
-            this.lbTimer.Size = new System.Drawing.Size(81, 38);
+            this.lbTimer.Size = new System.Drawing.Size(101, 38);
             this.lbTimer.TabIndex = 9;
             this.lbTimer.Text = "9999";
             this.lbTimer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
