@@ -80,9 +80,9 @@
             this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExit.Font = new System.Drawing.Font("Lemon/Milk", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExit.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btExit.Location = new System.Drawing.Point(12, 376);
+            this.btExit.Location = new System.Drawing.Point(12, 381);
             this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(134, 62);
+            this.btExit.Size = new System.Drawing.Size(134, 57);
             this.btExit.TabIndex = 16;
             this.btExit.Text = "Exit";
             this.btExit.UseVisualStyleBackColor = false;
@@ -131,6 +131,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
+            this.BackgroundImage = global::memoryM4WinForm.Properties.Resources.background1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lbGameTime);
             this.Controls.Add(this.lbWinner);

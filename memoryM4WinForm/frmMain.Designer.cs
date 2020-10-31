@@ -58,11 +58,11 @@
             this.btPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btPlay.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
             this.btPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumPurple;
-            this.btPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateBlue;
             this.btPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPlay.Font = new System.Drawing.Font("Lemon/Milk", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPlay.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btPlay.Location = new System.Drawing.Point(525, 43);
+            this.btPlay.Location = new System.Drawing.Point(522, 41);
             this.btPlay.Name = "btPlay";
             this.btPlay.Size = new System.Drawing.Size(171, 62);
             this.btPlay.TabIndex = 1;
@@ -265,11 +265,11 @@
             // 
             this.lbGameTitle.AutoSize = true;
             this.lbGameTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbGameTitle.Font = new System.Drawing.Font("Lemon/Milk", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGameTitle.Font = new System.Drawing.Font("Lemon/Milk", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGameTitle.ForeColor = System.Drawing.Color.White;
-            this.lbGameTitle.Location = new System.Drawing.Point(79, 20);
+            this.lbGameTitle.Location = new System.Drawing.Point(107, 38);
             this.lbGameTitle.Name = "lbGameTitle";
-            this.lbGameTitle.Size = new System.Drawing.Size(428, 103);
+            this.lbGameTitle.Size = new System.Drawing.Size(282, 68);
             this.lbGameTitle.TabIndex = 13;
             this.lbGameTitle.Text = "Memorize";
             // 
@@ -277,7 +277,7 @@
             // 
             this.panGame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panGame.BackColor = System.Drawing.Color.DarkViolet;
+            this.panGame.BackColor = System.Drawing.Color.Indigo;
             this.panGame.Controls.Add(this.lbGameTitle);
             this.panGame.Controls.Add(this.btPlay);
             this.panGame.Location = new System.Drawing.Point(-85, 477);
@@ -300,6 +300,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 611);
             this.Controls.Add(this.pbPreview);
             this.Controls.Add(this.lbPlayers);
