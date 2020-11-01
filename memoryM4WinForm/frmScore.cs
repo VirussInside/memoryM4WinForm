@@ -93,6 +93,11 @@ namespace memoryM4WinForm
             formMain.Show();
         }
 
+        /// <summary>
+        /// Close the game properly after closing the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmScore_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Dispose();

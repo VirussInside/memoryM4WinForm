@@ -24,9 +24,10 @@ namespace memoryM4WinForm
     public class GridMemory
     {
         private const int HIGHEST_DIFFICULTY = 8;   // Constant for the highest difficulty value (useful for generating the right amount of cards)
+        private const string CARD_BACK_NAME = "memorize_back_card"; // Name of the image resource for the cards back
 
         private int clickCount = 0;             // Click counter to know if 2 cards were clicked
-        private int gridCardsCount = 0;         // Counter of all teh cards
+        private int gridCardsCount = 0;         // Counter of all the cards
         private bool ComputerPlays = false;     // Defines if it's the computer turn to play
 
         private PictureBox pbClicked1;          // Store the first clicked Picturebox
@@ -35,8 +36,6 @@ namespace memoryM4WinForm
         private PlayerIA computerPlayer;        // Computer player to store an instance of the IA      
         private Player currentPlayer;           // Store the player that is actually playing
 
-
-        private const string CARD_BACK_NAME = "memorize_back_card"; // Name of the image resource for the cards back
 
         /// <summary>
         /// Constructor of GridMemory
@@ -265,7 +264,7 @@ namespace memoryM4WinForm
 
 
         /// <summary>
-        /// Comparing picturebox's names to know
+        /// Comparing picturebox's names
         /// </summary>
         /// <param name="nameOne">First picturebox's name clicked</param>
         /// <param name="nameTwo">Second picturebox's name cliked</param>
@@ -277,7 +276,7 @@ namespace memoryM4WinForm
 
 
         /// <summary>
-        /// Create the list of names with a duplicate of each to form the pairs
+        /// Create the list of names with a duplicate of each name to form the pairs
         /// </summary>
         /// <param name="chosenSubject">Name of the chosen subject</param>
         /// <param name="cardCount">Number of different cards to generate</param>
@@ -286,9 +285,9 @@ namespace memoryM4WinForm
         {
             // Create a list with all image names available
             List<string> allNames = new List<string>();
-            for (int i = 1; i <= HIGHEST_DIFFICULTY*HIGHEST_DIFFICULTY/2; i++) 
+            for (int imageIndex = 1; imageIndex <= HIGHEST_DIFFICULTY*HIGHEST_DIFFICULTY/2; imageIndex++) 
             {
-                allNames.Add(chosenSubject.ToLower() + i);
+                allNames.Add(chosenSubject.ToLower() + imageIndex);
                 
             }
             allNames = ShuffleImages(allNames); // Randomize the names to never pick the images in the same order

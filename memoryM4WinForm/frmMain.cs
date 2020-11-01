@@ -141,7 +141,7 @@ namespace memoryM4WinForm
 
 
         /// <summary>
-        /// Askss the player to enter his name
+        /// Asks the player to enter his name
         /// </summary>
         /// <returns>Player's entered name</returns>
         private string RequestPlayerName(int playerNumber)
@@ -153,7 +153,7 @@ namespace memoryM4WinForm
                 var result = formPlayerName.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-                    PlayerName = formPlayerName.EnteredName;            //values preserved after close
+                    PlayerName = formPlayerName.EnteredName;            
                 }
             }
             return PlayerName;

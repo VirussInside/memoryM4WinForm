@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="memoryM4WinForm.frmGame">
+    <Position X="4.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAACAAAAQiAIAIgBAAjFAAAGhAAREAIAAAiBAAAAAIA=</HashCode>
+      <FileName>frmGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.frmMain">
+    <Position X="2.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgiOiAAgBQQCACAAlCCAAgAAQEAAAAIgAgAAAA=</HashCode>
+      <FileName>frmMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.frmPlayerName">
+    <Position X="6.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAACAEAAAAAADABAACAAAAAwAAAIAAAAAAAAQ=</HashCode>
+      <FileName>frmPlayerName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.frmScore">
+    <Position X="8.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAQAAAIGAAIACEAABAACAAACAAAAAEAA=</HashCode>
+      <FileName>frmScore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.frmTitle">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACABAACEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>frmTitle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.GridMemory">
+    <Position X="10.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>oAAQEAAAAAAAAAIAAIACBAAAAQBAAgCRCQABAQEAAQA=</HashCode>
+      <FileName>GridMemory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.Player">
+    <Position X="14.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgACAQAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.PlayerIA">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PlayerIA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.Program">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.Settings">
+    <Position X="12.5" Y="2" Width="1.75" />
+    <NestedTypes>
+      <Enum Name="memoryM4WinForm.Settings.DifficultyLevel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Settings.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAQAAAJAAAAAAAAAUAAAAAACACAAAAAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.Properties.Resources" Collapsed="true">
+    <Position X="13.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8qvfDWA0ABPQLnKjQQDxP7tdAYAAwJf4dwCAZLcAAIg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="memoryM4WinForm.Properties.Settings">
+    <Position X="15.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

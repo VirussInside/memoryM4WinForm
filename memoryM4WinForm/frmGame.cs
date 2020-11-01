@@ -34,7 +34,8 @@ namespace memoryM4WinForm
         private List<Player> playersList;   // All players for the game
         private Timer gameTimer;            // Timer for the game in seconds
         private Stopwatch stopWatch;        // Stopwatch for the timer
-        
+        private int debugCount = 0;         // Counter for special debugging
+
         /// <summary>
         /// Constructor of the game form
         /// </summary>
@@ -144,12 +145,16 @@ namespace memoryM4WinForm
                 scoreList.Add(player.playerScore); // Add each score to the list 
             }
 
-            // Checking if all the scores are the same in case of a tie game
-            if (scoreList.Distinct().Count() == 1)
+            // Only if there are more than one player
+            if (playersList.Count > 1)
             {
-                gameWinner = new Player("It's a tie !");
-                gameWinner.playerScore = highestScore;
-                gameWinner.playerTie = true;
+                // Checking if all the scores are the same in case of a tie game
+                if (scoreList.Distinct().Count() == 1)
+                {
+                    gameWinner = new Player("It's a tie !");
+                    gameWinner.playerScore = highestScore;
+                    gameWinner.playerTie = true;
+                }
             }
 
             return gameWinner;
@@ -213,11 +218,17 @@ namespace memoryM4WinForm
         }
 
 
-        // Test the winning form without having to finish the memory by clicking on the playername
+        // Test the winning form without having to finish the memory by clicking on the playername 5 times
         // For testing purposes of the game winning form without having to actually win the game to save time
         private void lbPlayerName_Click(object sender, EventArgs e)
         {
-            ShowScore();
+            debugCount++;
+            if (debugCount == 5)
+            {
+                ShowScore();
+                debugCount = 0;
+            }
+           
         }
     }
 }
